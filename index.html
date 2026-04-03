@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    
+    <title>36 Studios | Redefine Your Online Existence</title>
+    <meta name="title" content="36 Studios | Redefine Your Online Existence">
+    <meta name="description" content="36 Studios is a premium creative agency crafting immersive digital experiences for startups and founders. We specialize in high-end web design and brand metamorphosis.">
+    <meta name="keywords" content="creative agency, web design, startup branding, premium websites, digital transformation, UX/UI design">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <link rel="canonical" href="https://yourdomain.com/" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:title" content="36 Studios | Redefine Your Online Existence">
+    <meta property="og:description" content="Bespoke, cinematic digital experiences for world-class founders. Minimalist aesthetics meet maximum performance.">
+    <meta property="og:image" content="https://yourdomain.com/og-image.jpg"> <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourdomain.com/">
+    <meta property="twitter:title" content="36 Studios | Redefine Your Online Existence">
+    <meta property="twitter:description" content="Bespoke, cinematic digital experiences for world-class founders.">
+    <meta property="twitter:image" content="https://yourdomain.com/og-image.jpg">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#000000">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "36 Studios",
+      "image": "https://yourdomain.com/og-image.jpg",
+      "url": "https://yourdomain.com",
+      "telephone": "",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US"
+      },
+      "description": "Premium creative agency specializing in immersive web design and digital brand elevation.",
+      "offers": {
+        "@type": "Offer",
+        "serviceType": ["Web Design", "Branding", "Conversion Engineering"]
+      }
+    }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Barlow:wght@300;400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ffffff",
+                        "surface-container-high": "#2a2a2a",
+                    },
+                    fontFamily: {
+                        "headline": ["'Instrument Serif'", "serif"],
+                        "body": ["'Barlow'", "sans-serif"],
+                    }
+                },
+            },
+        }
+</script>
+
+    <style>
+        /* Base Utilities */
+        @layer utilities {
+            .liquid-glass {
+                background: rgba(255, 255, 255, 0.02);
+                backdrop-filter: blur(16px);
+                -webkit-backdrop-filter: blur(16px);
+            }
+            .liquid-glass-strong {
+                background: rgba(255, 255, 255, 0.05);
+                backdrop-filter: blur(40px);
+                -webkit-backdrop-filter: blur(40px);
+            }
+            .material-symbols-outlined {
+                font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            }
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Barlow', sans-serif;
+            overflow-x: hidden;
+            /* Prevent overscroll bounce on Mac for a cleaner app-like feel */
+            overscroll-behavior-y: none; 
+        }
+
+        /* Hide default cursor only on devices with a mouse */
+        @media (pointer: fine) {
+            body, a, button, input, textarea {
+                cursor: none !important;
+            }
+        }
+
+        /* Hide scrollbar completely */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        * {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Cinematic Noise Grain */
+        .noise {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 9999;
+            background: url('data:image/svg+xml;utf8,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E');
+            opacity: 0.04;
+        }
+
+        /* Hardware Accelerated Custom Cursor */
+        .cursor-dot, .cursor-outline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: translate3d(-50%, -50%, 0);
+            pointer-events: none;
+            z-index: 10000;
+            will-change: transform, width, height;
+            border-radius: 50%;
+        }
+
+        .cursor-dot {
+            width: 6px;
+            height: 6px;
+            background-color: white;
+            transition: width 0.2s cubic-bezier(0.16, 1, 0.3, 1), height 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .cursor-outline {
+            width: 30px;
+            height: 30px;
+            border: 1px solid rgba(255,255,255,0.4);
+            z-index: 9999;
+            transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s, background-color 0.3s, backdrop-filter 0.3s;
+        }
+
+        /* Hover States for Cursor */
+        .cursor-hover .cursor-dot {
+            width: 0px;
+            height: 0px;
+        }
+        .cursor-hover .cursor-outline {
+            width: 55px;
+            height: 55px;
+            background-color: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.8);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+        }
+
+        /* Marquee Optimization */
+        .marquee-container {
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            will-change: transform;
+        }
+        .marquee-content {
+            animation: marquee 25s linear infinite;
+            min-width: 200%;
+            will-change: transform;
+        }
+        @keyframes marquee {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-50%, 0, 0); }
+        }
+
+        /* Init GSAP States */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translate3d(0, 40px, 0);
+            will-change: transform, opacity;
+        }
+
+        /* Parallax Optimization */
+        .parallax-media {
+            will-change: transform;
+            transform-origin: center center;
+        }
+    </style>
+</head>
+<body class="selection:bg-white selection:text-black bg-black text-white antialiased">
+
+    <div class="noise"></div>
+    <div class="cursor-dot hidden md:block"></div>
+    <div class="cursor-outline hidden md:block"></div>
+
+    <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between max-w-6xl px-8 rounded-full mt-6 mx-auto w-[95%] lg:w-[45%] py-4 bg-white/5 dark:bg-black/20 backdrop-blur-2xl border border-white/10 shadow-[0_20px_80px_rgba(0,0,0,0.8)] transition-all duration-500 will-change-transform" id="navbar">
+        <div class="font-headline italic text-3xl tracking-tighter text-white mr-12 hover-target">36 Studios</div>
+        <div class="hidden md:flex items-center gap-10 mr-12">
+            <a class="text-white/60 font-medium text-sm tracking-wide hover:text-white transition-colors duration-300 hover-target" href="#services">Services</a>
+            <a class="text-white/60 font-medium text-sm tracking-wide hover:text-white transition-colors duration-300 hover-target" href="#process">Process</a>
+            <a class="text-white/60 font-medium text-sm tracking-wide hover:text-white transition-colors duration-300 hover-target" href="#work">Work</a>
+            <a class="text-white/60 font-medium text-sm tracking-wide hover:text-white transition-colors duration-300 hover-target" href="#faq">FAQ</a>
+        </div>
+        <button class="inquire-trigger bg-white text-black font-semibold text-[11px] uppercase tracking-[0.2em] px-8 py-3 rounded-full hover:scale-105 transition-transform duration-500 hover-target shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+            Inquire
+        </button>
+    </nav>
+
+    <section class="relative z-1 h-screen bg-black w-full flex flex-col items-center justify-center overflow-hidden pt-20">
+        <video autoplay loop muted playsinline preload="auto" class="absolute top-0 left-0 w-full h-full object-cover opacity-60 scale-105 hero-video">
+            <source src="/public/heroBg2.mp4" type="video/mp4"/>
+        </video>
+        <div class="absolute bottom-0 left-0 w-full h-1/5 bg-gradient-to-t from-black via-black/80 to-transparent z-10 pointer-events-none"></div>
+        
+        <div class="relative z-20 text-center container mx-auto px-6 flex flex-col items-center mt-20">
+            <h1 class="font-headline italic text-7xl md:text-[10rem] mb-6 max-w-6xl leading-[0.85] tracking-tighter text-white hero-text drop-shadow-2xl">
+                The Website Your Brand Deserves
+            </h1>
+            <p class="text-lg md:text-2xl text-white/70 max-w-2xl mb-12 font-body font-light hero-subtext">
+                We craft hyper-premium digital experiences for world-class founders. Minimalist aesthetics meet maximum performance.
+            </p>
+            <div class="flex flex-col md:flex-row gap-6 hero-buttons">
+                <button class="inquire-trigger bg-white text-black px-10 py-4 rounded-full text-xs font-bold uppercase tracking-[0.2em] hover:scale-105 transition-transform duration-500 hover-target">
+                    Start Curation
+                </button>
+                <a href="#work" class="liquid-glass text-white px-10 py-4 rounded-full text-xs font-bold uppercase tracking-[0.2em] border border-white/20 hover:bg-white/10 transition-colors duration-500 hover-target text-center">
+                    View Work
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 border-y border-white/10 overflow-hidden flex flex-col items-center justify-center z-20 relative bg-black">
+        <div class="marquee-container w-full max-w-full">
+            <div class="marquee-content flex gap-16 items-center opacity-40 hover:opacity-100 transition-opacity duration-700">
+                <span class="font-headline italic text-5xl">Atelier</span>
+                <span class="w-2 h-2 bg-white rounded-full"></span>
+                <span class="font-headline italic text-5xl">Enterprise</span>
+                <span class="w-2 h-2 bg-white rounded-full"></span>
+                <span class="font-headline italic text-5xl">Venture</span>
+                <span class="w-2 h-2 bg-white rounded-full"></span>
+                <span class="font-headline italic text-5xl">Brand</span>
+                <span class="w-2 h-2 bg-white rounded-full"></span>
+                <span class="font-headline italic text-5xl">Consortium</span>
+                <span class="w-2 h-2 bg-white rounded-full"></span>
+                <span class="font-headline italic text-5xl">Firm</span>
+                <span class="w-2 h-2 bg-white rounded-full"></span>
+                <span class="font-headline italic text-5xl">Studio</span>
+                <span class="w-2 h-2 bg-white rounded-full"></span>
+                <span class="font-headline italic text-5xl">Atelier</span>
+                <span class="w-2 h-2 bg-white rounded-full"></span>
+                <span class="font-headline italic text-5xl">Enterprise</span>
+                <span class="w-2 h-2 bg-white rounded-full"></span>
+                <span class="font-headline italic text-5xl">Venture</span>
+                <span class="w-2 h-2 bg-white rounded-full"></span>
+                <span class="font-headline italic text-5xl">Brand</span>
+                <span class="w-2 h-2 bg-white rounded-full"></span>
+                <span class="font-headline italic text-5xl">Consortium</span>
+                <span class="w-2 h-2 bg-white rounded-full"></span>
+                <span class="font-headline italic text-5xl">Firm</span>
+                <span class="w-2 h-2 bg-white rounded-full"></span>
+                <span class="font-headline italic text-5xl">Studio</span>
+                <span class="w-2 h-2 bg-white rounded-full"></span>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-32 bg-black relative">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="mb-20 animate-on-scroll">
+                <span class="text-white/40 uppercase tracking-[0.3em] text-xs font-bold mb-6 block">Capabilities</span>
+                <h2 class="font-headline italic text-6xl md:text-8xl">More than code.<br/>A digital metamorphosis.</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="liquid-glass p-10 rounded-2xl border-white/5 hover:bg-white/5 transition-colors duration-500 group animate-on-scroll hover-target">
+                    <div class="text-white/20 text-5xl font-headline italic mb-8 group-hover:text-white transition-colors duration-500">01</div>
+                    <h3 class="text-3xl font-headline italic mb-4">Immersive Web Design</h3>
+                    <p class="text-white/50 text-sm leading-relaxed font-body font-light">We abandon templates to build bespoke, cinematic experiences utilizing WebGL, GSAP, and advanced physics to hold user attention.</p>
+                </div>
+                <div class="liquid-glass p-10 rounded-2xl border-white/5 hover:bg-white/5 transition-colors duration-500 group animate-on-scroll hover-target" style="transition-delay: 100ms;">
+                    <div class="text-white/20 text-5xl font-headline italic mb-8 group-hover:text-white transition-colors duration-500">02</div>
+                    <h3 class="text-3xl font-headline italic mb-4">Conversion Engineering</h3>
+                    <p class="text-white/50 text-sm leading-relaxed font-body font-light">Beauty meets data. Every scroll, click, and interaction is engineered to guide your elite clientele directly to the point of acquisition.</p>
+                </div>
+                <div class="liquid-glass p-10 rounded-2xl border-white/5 hover:bg-white/5 transition-colors duration-500 group animate-on-scroll hover-target" style="transition-delay: 200ms;">
+                    <div class="text-white/20 text-5xl font-headline italic mb-8 group-hover:text-white transition-colors duration-500">03</div>
+                    <h3 class="text-3xl font-headline italic mb-4">Brand Elevation</h3>
+                    <p class="text-white/50 text-sm leading-relaxed font-body font-light">We align your visual identity with your ambition. High-end typography, custom 3D assets, and a cohesive narrative that positions you as the authority.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="relative py-32 bg-black flex items-center justify-center overflow-hidden border-t border-white/10">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-20 items-center max-w-7xl">
+            <div class="relative rounded-2xl overflow-hidden liquid-glass aspect-video group animate-on-scroll parallax-container">
+                <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-100 parallax-media scale-[1.2]">
+                    <source src="/public/work1.mp4" type="video/mp4"/>
+                </video>
+                <div class="absolute inset-0  group-hover:bg-black/10 transition-colors duration-700 pointer-events-none"></div>
+            </div>
+            <div class="flex flex-col items-start animate-on-scroll" style="transition-delay: 150ms;">
+                <span class="text-white/40 uppercase tracking-[0.3em] text-xs font-bold mb-6">The Pipeline</span>
+                <h2 class="font-headline italic text-6xl md:text-8xl mb-8 leading-[0.9]">You dream it.<br/>We ship it.</h2>
+                <p class="text-white/60 text-lg leading-relaxed mb-10 font-light">
+                    Our streamlined pipeline transforms complex visions into pixel-perfect reality in record time. We bypass the bloat of traditional agencies. No friction, just pure execution.
+                </p>
+                <ul class="space-y-4 mb-10 w-full">
+                    <li class="flex items-center gap-4 border-b border-white/10 pb-4">
+                        <span class="text-white/30 font-headline italic text-2xl">A.</span>
+                        <span class="font-medium text-white/80 tracking-wide text-sm">Strategic Discovery & Blueprinting</span>
+                    </li>
+                    <li class="flex items-center gap-4 border-b border-white/10 pb-4">
+                        <span class="text-white/30 font-headline italic text-2xl">B.</span>
+                        <span class="font-medium text-white/80 tracking-wide text-sm">Design & Motion Choreography</span>
+                    </li>
+                    <li class="flex items-center gap-4 border-b border-white/10 pb-4">
+                        <span class="text-white/30 font-headline italic text-2xl">C.</span>
+                        <span class="font-medium text-white/80 tracking-wide text-sm">Development & Edge Deployment</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="py-32 bg-black space-y-48 border-t border-white/10">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-24 items-center max-w-7xl">
+            <div class="order-2 md:order-1 animate-on-scroll">
+                <span class="text-white/40 uppercase tracking-[0.3em] text-xs font-bold mb-6 block">Interaction</span>
+                <h3 class="font-headline italic text-6xl md:text-7xl mb-8 leading-[0.9]">Motion that<br/>commands attention.</h3>
+                <p class="text-white/60 text-lg mb-12 font-light">We don't just build pages; we choreograph experiences. Every interaction is designed to feel heavy, expensive, and deeply intentional.</p>
+                <button class="liquid-glass text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-colors duration-300 hover-target">
+                    Explore Animations
+                </button>
+            </div>
+            <div class="order-1 md:order-2 liquid-glass-strong p-2 rounded-2xl animate-on-scroll parallax-container aspect-[4/5]">
+                <video class="w-full h-full object-cover rounded-xl parallax-media scale-[1.15]" loop muted playsinline autoplay preload="auto">
+                    <source src="/public/work2.mp4" type="video/mp4"/>
+                </video>
+            </div>
+        </div>
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-24 items-center max-w-7xl">
+            <div class="liquid-glass-strong p-2 rounded-2xl animate-on-scroll parallax-container aspect-[5/3]">
+                <video class="w-full h-full object-cover rounded-xl parallax-media scale-[1.15]" loop muted playsinline autoplay preload="auto">
+                    <source src="/public/work3.mp4" type="video/mp4"/>
+                </video>
+            </div>
+            <div class="animate-on-scroll" style="transition-delay: 150ms;">
+                <span class="text-white/40 uppercase tracking-[0.3em] text-xs font-bold mb-6 block">Performance</span>
+                <h3 class="font-headline italic text-6xl md:text-7xl mb-8 leading-[0.9]">Coded for the<br/>absolute elite.</h3>
+                <p class="text-white/60 text-lg mb-12 font-light">Performance is the ultimate luxury. Our websites load in the blink of an eye, maintaining a perfect 100 Lighthouse score globally.</p>
+                <button class="liquid-glass text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-colors duration-300 hover-target">
+                    View Specs
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative py-48 bg-black overflow-hidden flex items-center justify-center border-t border-white/10">
+        <video autoplay class="absolute inset-0 w-full h-full object-cover opacity-20 grayscale brightness-50" loop muted playsinline>
+            <source src="https://stream.mux.com/8wrHPCX2dC3msyYU9ObwqNdm00u3ViXvOSHUMRYSEe5Q.m3u8" type="application/x-mpegURL"/>
+        </video>
+        <div class="absolute inset-0 bg-black/60 z-10"></div>
+        <div class="relative z-20 container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-16 text-center">
+                <div class="animate-on-scroll">
+                    <div class="font-headline italic text-7xl md:text-8xl mb-4 text-white">70+</div>
+                    <div class="text-white/50 uppercase tracking-[0.2em] text-[10px] font-bold">Brands Launched</div>
+                </div>
+                <div class="animate-on-scroll" style="transition-delay: 100ms;">
+                    <div class="font-headline italic text-7xl md:text-8xl mb-4 text-white">98%</div>
+                    <div class="text-white/50 uppercase tracking-[0.2em] text-[10px] font-bold">Client Satisfaction</div>
+                </div>
+                <div class="animate-on-scroll" style="transition-delay: 200ms;">
+                    <div class="font-headline italic text-7xl md:text-8xl mb-4 text-white">5.2x</div>
+                    <div class="text-white/50 uppercase tracking-[0.2em] text-[10px] font-bold">Avg. Conversion Lift</div>
+                </div>
+                <div class="animate-on-scroll" style="transition-delay: 300ms;">
+                    <div class="font-headline italic text-7xl md:text-8xl mb-4 text-white">&lt;2s</div>
+                    <div class="text-white/50 uppercase tracking-[0.2em] text-[10px] font-bold">Global Load Time</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 bg-black border-t border-white/10">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="mb-24 text-center animate-on-scroll">
+                <h2 class="font-headline italic text-6xl md:text-8xl mb-6">Kind words from<br/>the inner circle.</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="liquid-glass bg-white/5 p-12 rounded-2xl border-white/5 hover:-translate-y-2 transition-transform duration-500 animate-on-scroll">
+                    <span class="text-4xl text-white/20 font-headline italic mb-6 block">"</span>
+                    <p class="text-2xl font-headline italic text-white/90 mb-10 leading-snug">The level of detail is obsessive. It's the first time our digital presence actually matched the quality of our physical product.</p>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <div class="w-12 h-12 rounded-full bg-surface-container-high overflow-hidden border border-white/20">
+                            <img class="w-full h-full object-cover" data-alt="portrait" src="https://i.pravatar.cc/150?img=11"/>
+                        </div>
+                        <div>
+                            <div class="font-bold text-sm tracking-wide">Rajeev Kinara</div>
+                            <div class="text-white/40 text-[10px] uppercase tracking-widest mt-1">Founder, Aethelgard</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="liquid-glass bg-white/5 p-12 rounded-2xl border-white/5 hover:-translate-y-2 transition-transform duration-500 animate-on-scroll" style="transition-delay: 100ms;">
+                    <span class="text-4xl text-white/20 font-headline italic mb-6 block">"</span>
+                    <p class="text-2xl font-headline italic text-white/90 mb-10 leading-snug">Speed used to be a compromise. With 36 Studios, we got a cinematic experience that loads faster than a basic SaaS template.</p>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <div class="w-12 h-12 rounded-full bg-surface-container-high overflow-hidden border border-white/20">
+                            <img class="w-full h-full object-cover" data-alt="portrait" src="https://i.pravatar.cc/150?img=33"/>
+                        </div>
+                        <div>
+                            <div class="font-bold text-sm tracking-wide">Manoj Sharma</div>
+                            <div class="text-white/40 text-[10px] uppercase tracking-widest mt-1">Co-Founder, Veloura</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="liquid-glass bg-white/5 p-12 rounded-2xl border-white/5 hover:-translate-y-2 transition-transform duration-500 animate-on-scroll" style="transition-delay: 200ms;">
+                    <span class="text-4xl text-white/20 font-headline italic mb-6 block">"</span>
+                    <p class="text-2xl font-headline italic text-white/90 mb-10 leading-snug">They don't just design; they curate. Every pixel feels like it has a purpose. Truly the undisputed best in the industry right now.</p>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <div class="w-12 h-12 rounded-full bg-surface-container-high overflow-hidden border border-white/20">
+                            <img class="w-full h-full object-cover" data-alt="portrait" src="https://i.pravatar.cc/150?img=44"/>
+                        </div>
+                        <div>
+                            <div class="font-bold text-sm tracking-wide">Inaya Khan</div>
+                            <div class="text-white/40 text-[10px] uppercase tracking-widest mt-1">CTO, Verity Labs</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-32 bg-black border-t border-white/10">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="mb-16 text-center animate-on-scroll">
+                <span class="text-white/40 uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Clarity</span>
+                <h2 class="font-headline italic text-6xl">Frequently Asked</h2>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="faq-item border-b border-white/10 pb-6 animate-on-scroll">
+                    <button class="faq-toggle w-full flex justify-between items-center text-left py-4 hover-target group">
+                        <span class="text-xl md:text-2xl font-headline italic group-hover:text-white/80 transition-colors">How long does a typical build take?</span>
+                        <span class="material-symbols-outlined transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">add</span>
+                    </button>
+                    <div class="faq-content overflow-hidden max-h-0 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+                        <p class="text-white/60 font-body text-sm leading-relaxed pt-4 pb-2 pr-12">
+                            Because we bypass traditional agency bloat and bloated builders, most premium experiences are deployed within 2 to 4 weeks, depending on complexity.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item border-b border-white/10 pb-6 animate-on-scroll">
+                    <button class="faq-toggle w-full flex justify-between items-center text-left py-4 hover-target group">
+                        <span class="text-xl md:text-2xl font-headline italic group-hover:text-white/80 transition-colors">Do you work with startups or just established enterprises?</span>
+                        <span class="material-symbols-outlined transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">add</span>
+                    </button>
+                    <div class="faq-content overflow-hidden max-h-0 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+                        <p class="text-white/60 font-body text-sm leading-relaxed pt-4 pb-2 pr-12">
+                            We work with ambitious founders. Whether you're an enterprise looking to modernize or a funded startup needing to establish immediate authority, if the vision is grand, we build it.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item border-b border-white/10 pb-6 animate-on-scroll">
+                    <button class="faq-toggle w-full flex justify-between items-center text-left py-4 hover-target group">
+                        <span class="text-xl md:text-2xl font-headline italic group-hover:text-white/80 transition-colors">What tech stack do you use?</span>
+                        <span class="material-symbols-outlined transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">add</span>
+                    </button>
+                    <div class="faq-content overflow-hidden max-h-0 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+                        <p class="text-white/60 font-body text-sm leading-relaxed pt-4 pb-2 pr-12">
+                            We build on the edge. Typically this means Next.js/React or highly optimized Vanilla HTML/JS environments, styled with Tailwind, animated by GSAP/WebGL, and hosted on Vercel or AWS for zero-latency loading.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative pt-64 pb-12 bg-black overflow-hidden flex flex-col items-center text-center">
+        <video autoplay class="absolute top-0 left-0 w-full h-full object-cover opacity-30 grayscale" loop muted playsinline>
+            <source src="https://stream.mux.com/NcU3HlHeF7CUL86azTTzpy3Tlb00d6iF3BmCdFslMJYM.m3u8" type="application/x-mpegURL"/>
+        </video>
+        <div class="absolute inset-0 bg-gradient-to-b from-black via-black/50 to-black z-10"></div>
+        <div class="relative z-20 container mx-auto px-6 flex flex-col items-center">
+            <h2 class="font-headline italic text-7xl md:text-[12rem] mb-12 tracking-tighter text-white drop-shadow-2xl">Your next website<br/>starts here.</h2>
+            <button class="inquire-trigger bg-white text-black px-16 py-6 rounded-full text-sm font-bold uppercase tracking-[0.2em] mb-40 hover:scale-110 transition-transform duration-500 shadow-[0_0_40px_rgba(255,255,255,0.3)] hover-target">
+                Start Curation
+            </button>
+            
+            <footer class="w-full border-t border-white/10 pt-12 flex flex-col items-center max-w-6xl">
+                <div class="text-5xl italic font-headline text-white mb-8">36 Studios</div>
+                <div class="flex flex-wrap justify-center gap-8 md:gap-16 mb-12 text-white/50 text-[11px] font-bold uppercase tracking-[0.2em]">
+                    <a class="hover:text-white transition-colors hover-target" href="#privacy">Privacy Policy</a>
+                    <a class="hover:text-white transition-colors hover-target" href="#terms">Terms of Service</a>
+                    <a class="hover:text-white transition-colors hover-target" href="#editorial">Editorial</a>
+                    <a class="inquire-trigger hover:text-white transition-colors cursor-pointer hover-target">Contact Us</a>
+                </div>
+                <div class="text-white/20 text-[10px] uppercase tracking-[0.3em]">
+                    © 2026 36 STUDIOS. ALL RIGHTS RESERVED. CRAFTED IN THE VOID.
+                </div>
+            </footer>
+        </div>
+    </section>
+
+    <div id="inquireModal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-xl opacity-0 pointer-events-none transition-all duration-500">
+        <div id="inquireModalContent" class="liquid-glass-strong p-12 rounded-3xl max-w-md w-[90%] border border-white/20 relative transform scale-95 transition-transform duration-500 shadow-2xl">
+            <button id="closeModal" class="absolute top-6 right-6 text-white/50 hover:text-white transition-colors hover-target bg-white/5 rounded-full p-2">
+                <span class="material-symbols-outlined block">close</span>
+            </button>
+            <h3 class="font-headline italic text-6xl mb-4 text-white">Let's Talk</h3>
+            <p class="text-white/60 text-sm mb-10 leading-relaxed font-body">Choose how you'd like to initiate the curation. We aim to respond within 2 hours.</p>
+            
+            <div class="flex flex-col gap-4">
+                <a href="mailto:36studios.web@gmail.com" class="bg-white text-black py-4 rounded-xl text-center font-bold text-xs tracking-[0.2em] uppercase hover:scale-[1.02] transition-transform duration-300 hover-target shadow-lg">
+                    Email Us
+                </a>
+                <a href="https://wa.me/7796288980?text=Hey,%20I%20saw%20your%20website%20and%20want%20to%20discuss%20a%20project.%20When%20are%20you%20available%20to%20chat?" target="_blank" class="liquid-glass text-white py-4 rounded-xl text-center font-bold text-xs tracking-[0.2em] uppercase hover:bg-white/10 transition-colors duration-300 border border-white/20 hover-target">
+                    WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // -------------------------
+            // 1. Lenis Smooth Scrolling (Tuned for Premium Feel)
+            // -------------------------
+            const lenis = new Lenis({
+                duration: 1.4, // Slightly longer for weight
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                smoothWheel: true,
+                lerp: 0.08, // Gives that heavy cinematic momentum
+            });
+
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+
+            // Sync GSAP with Lenis strictly
+            lenis.on('scroll', ScrollTrigger.update);
+            gsap.ticker.add((time) => { lenis.raf(time * 1000) });
+            gsap.ticker.lagSmoothing(0);
+
+            // -------------------------
+            // 2. Hardware Accelerated Cursor
+            // -------------------------
+            const cursorDot = document.querySelector('.cursor-dot');
+            const cursorOutline = document.querySelector('.cursor-outline');
+            const hoverTargets = document.querySelectorAll('.hover-target, a, button');
+
+            // Use GSAP QuickTo for 120fps tracking without layout thrashing
+            if (cursorDot && cursorOutline && window.matchMedia("(pointer: fine)").matches) {
+                gsap.set([cursorDot, cursorOutline], { xPercent: -50, yPercent: -50 });
+                
+                const xToDot = gsap.quickTo(cursorDot, "x", { duration: 0.1, ease: "power3" });
+                const yToDot = gsap.quickTo(cursorDot, "y", { duration: 0.1, ease: "power3" });
+                
+                const xToOutline = gsap.quickTo(cursorOutline, "x", { duration: 0.5, ease: "power3.out" });
+                const yToOutline = gsap.quickTo(cursorOutline, "y", { duration: 0.5, ease: "power3.out" });
+
+                window.addEventListener("mousemove", e => {
+                    xToDot(e.clientX);
+                    yToDot(e.clientY);
+                    xToOutline(e.clientX);
+                    yToOutline(e.clientY);
+                });
+
+                // Hover state toggles
+                hoverTargets.forEach(target => {
+                    target.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+                    target.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+                });
+            }
+
+            // -------------------------
+            // 3. GSAP Animations (force3D enabled)
+            // -------------------------
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Hero Timeline
+            const heroTl = gsap.timeline({ defaults: { force3D: true } });
+            heroTl.fromTo(".hero-text", 
+                { opacity: 0, y: 50, filter: "blur(10px)" }, 
+                { opacity: 1, y: 0, filter: "blur(0px)", duration: 1.5, ease: "power3.out", delay: 0.2 }
+            )
+            .fromTo(".hero-subtext", 
+                { opacity: 0, y: 20 }, 
+                { opacity: 1, y: 0, duration: 1, ease: "power2.out" }, "-=1"
+            )
+            .fromTo(".hero-buttons", 
+                { opacity: 0, y: 20 }, 
+                { opacity: 1, y: 0, duration: 1, ease: "power2.out" }, "-=0.8"
+            );
+
+            // Scroll Fade-Up
+            const animatedElements = gsap.utils.toArray('.animate-on-scroll');
+            animatedElements.forEach((el) => {
+                gsap.to(el, {
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 85%", 
+                        toggleActions: "play none none reverse"
+                    },
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    ease: "power3.out",
+                    force3D: true // GPU acceleration
+                });
+            });
+
+            // Parallax Videos (Optimized Y translation)
+            const parallaxContainers = gsap.utils.toArray('.parallax-container');
+            parallaxContainers.forEach(container => {
+                const media = container.querySelector('.parallax-media');
+                gsap.to(media, {
+                    yPercent: 15,
+                    ease: "none",
+                    force3D: true,
+                    scrollTrigger: {
+                        trigger: container,
+                        start: "top bottom", 
+                        end: "bottom top",
+                        scrub: true
+                    }
+                });
+            });
+
+            // Navbar Blurring
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('bg-black/60', 'py-3');
+                    navbar.classList.remove('py-4', 'bg-white/5');
+                } else {
+                    navbar.classList.remove('bg-black/60', 'py-3');
+                    navbar.classList.add('py-4', 'bg-white/5');
+                }
+            }, { passive: true });
+
+            // -------------------------
+            // 4. FAQ Accordion Logic
+            // -------------------------
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const toggle = item.querySelector('.faq-toggle');
+                const content = item.querySelector('.faq-content');
+                const icon = item.querySelector('.material-symbols-outlined');
+
+                toggle.addEventListener('click', () => {
+                    const isOpen = content.style.maxHeight;
+
+                    // Close siblings smoothly
+                    faqItems.forEach(otherItem => {
+                        otherItem.querySelector('.faq-content').style.maxHeight = null;
+                        otherItem.querySelector('.material-symbols-outlined').style.transform = 'rotate(0deg)';
+                    });
+
+                    // Open target
+                    if (!isOpen) {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        icon.style.transform = 'rotate(45deg)'; 
+                    }
+                });
+            });
+
+            // -------------------------
+            // 5. HLS.js Video Logic
+            // -------------------------
+            const videos = document.querySelectorAll('video');
+            videos.forEach(video => {
+                const sourceElement = video.querySelector('source');
+                const src = sourceElement ? sourceElement.src : null;
+                if (!src) return;
+
+                if (src.includes('.m3u8')) {
+                    if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                        video.src = src;
+                    } else if (typeof Hls !== 'undefined' && Hls.isSupported()) {
+                        const hls = new Hls();
+                        hls.loadSource(src);
+                        hls.attachMedia(video);
+                    }
+                }
+            });
+
+            // -------------------------
+            // 6. Modal Logic
+            // -------------------------
+            const modal = document.getElementById('inquireModal');
+            const modalContent = document.getElementById('inquireModalContent');
+            const closeBtn = document.getElementById('closeModal');
+            const inquireTriggers = document.querySelectorAll('.inquire-trigger');
+
+            function openModal() {
+                modal.classList.remove('opacity-0', 'pointer-events-none');
+                modalContent.classList.remove('scale-95');
+                modalContent.classList.add('scale-100');
+                lenis.stop(); 
+            }
+
+            function closeModal() {
+                modal.classList.add('opacity-0', 'pointer-events-none');
+                modalContent.classList.remove('scale-100');
+                modalContent.classList.add('scale-95');
+                lenis.start(); 
+            }
+
+            inquireTriggers.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    openModal();
+                });
+            });
+
+            closeBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !modal.classList.contains('opacity-0')) closeModal();
+            });
+        });
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

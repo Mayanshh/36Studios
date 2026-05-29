@@ -204,7 +204,7 @@
     <div class="cursor-dot hidden md:block"></div>
     <div class="cursor-outline hidden md:block"></div>
 
-    <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between max-w-6xl px-8 rounded-full mt-6 mx-auto w-[95%] lg:w-[45%] py-4 bg-white/5 dark:bg-black/20 backdrop-blur-2xl border border-white/10 shadow-[0_20px_80px_rgba(0,0,0,0.8)] transition-all duration-500 will-change-transform" id="navbar">
+    <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between max-w-6xl px-8 rounded-full mt-6 mx-auto w-[95%] lg:w-[45%] py-4 bg-white/5 dark:bg-black/20 backdrop-blur-2xl border border-white/10 shadow-[0_20px_80px_rgba(0,0,0,0.8)] transition-all duration-500 will-change-transform" id="navbar" role="navigation" aria-label="Main Navigation">
         <div class="font-headline italic text-3xl tracking-tighter text-white mr-12 hover-target">36 Studios</div>
         <div class="hidden md:flex items-center gap-10 mr-12">
             <a class="text-white/60 font-medium text-sm tracking-wide hover:text-white transition-colors duration-300 hover-target" href="#services">Services</a>
@@ -217,303 +217,305 @@
         </button>
     </nav>
 
-    <section class="relative z-1 h-screen bg-black w-full flex flex-col items-center justify-center overflow-hidden pt-20">
-        <video autoplay loop muted playsinline preload="auto" class="absolute top-0 left-0 w-full h-full object-cover opacity-60 scale-105 hero-video">
-            <source src="https://res.cloudinary.com/ddoqejzwg/video/upload/v1775231578/heroBg2_encxrx.mp4" type="video/mp4"/>
-        </video>
-        <div class="absolute bottom-0 left-0 w-full h-1/5 bg-gradient-to-t from-black via-black/80 to-transparent z-10 pointer-events-none"></div>
-        
-        <div class="relative z-20 text-center container mx-auto px-6 flex flex-col items-center mt-20">
-            <h1 class="font-headline italic text-7xl md:text-[10rem] mb-6 max-w-6xl leading-[0.85] tracking-tighter text-white hero-text drop-shadow-2xl">
-                The Website Your Brand Deserves
-            </h1>
-            <p class="text-lg md:text-2xl text-white/70 max-w-2xl mb-12 font-body font-light hero-subtext">
-                We craft hyper-premium digital experiences for world-class founders. Minimalist aesthetics meet maximum performance.
-            </p>
-            <div class="flex flex-col md:flex-row gap-6 hero-buttons">
-                <button class="inquire-trigger bg-white text-black px-10 py-4 rounded-full text-xs font-bold uppercase tracking-[0.2em] hover:scale-105 transition-transform duration-500 hover-target">
+    <main role="main">
+        <section class="relative z-1 h-screen bg-black w-full flex flex-col items-center justify-center overflow-hidden pt-20" role="region" aria-label="Introduction">
+            <video autoplay loop muted playsinline preload="auto" class="absolute top-0 left-0 w-full h-full object-cover opacity-60 scale-105 hero-video">
+                <source src="https://res.cloudinary.com/ddoqejzwg/video/upload/v1775231578/heroBg2_encxrx.mp4" type="video/mp4"/>
+            </video>
+            <div class="absolute bottom-0 left-0 w-full h-1/5 bg-gradient-to-t from-black via-black/80 to-transparent z-10 pointer-events-none"></div>
+            
+            <div class="relative z-20 text-center container mx-auto px-6 flex flex-col items-center mt-20">
+                <h1 class="font-headline italic text-7xl md:text-[10rem] mb-6 max-w-6xl leading-[0.85] tracking-tighter text-white hero-text drop-shadow-2xl">
+                    The Website Your Brand Deserves
+                </h1>
+                <p class="text-lg md:text-2xl text-white/70 max-w-2xl mb-12 font-body font-light hero-subtext">
+                    We craft hyper-premium digital experiences for world-class founders. Minimalist aesthetics meet maximum performance.
+                </p>
+                <div class="flex flex-col md:flex-row gap-6 hero-buttons">
+                    <button class="inquire-trigger bg-white text-black px-10 py-4 rounded-full text-xs font-bold uppercase tracking-[0.2em] hover:scale-105 transition-transform duration-500 hover-target">
+                        Start Curation
+                    </button>
+                    <a href="#work" class="liquid-glass text-white px-10 py-4 rounded-full text-xs font-bold uppercase tracking-[0.2em] border border-white/20 hover:bg-white/10 transition-colors duration-500 hover-target text-center">
+                        View Work
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 border-y border-white/10 overflow-hidden flex flex-col items-center justify-center z-20 relative bg-black" role="region" aria-label="Brand Overview Marquee">
+            <div class="marquee-container w-full max-w-full">
+                <div class="marquee-content flex gap-16 items-center opacity-40 hover:opacity-100 transition-opacity duration-700">
+                    <span class="font-headline italic text-5xl">Atelier</span>
+                    <span class="w-2 h-2 bg-white rounded-full"></span>
+                    <span class="font-headline italic text-5xl">Enterprise</span>
+                    <span class="w-2 h-2 bg-white rounded-full"></span>
+                    <span class="font-headline italic text-5xl">Venture</span>
+                    <span class="w-2 h-2 bg-white rounded-full"></span>
+                    <span class="font-headline italic text-5xl">Brand</span>
+                    <span class="w-2 h-2 bg-white rounded-full"></span>
+                    <span class="font-headline italic text-5xl">Consortium</span>
+                    <span class="w-2 h-2 bg-white rounded-full"></span>
+                    <span class="font-headline italic text-5xl">Firm</span>
+                    <span class="w-2 h-2 bg-white rounded-full"></span>
+                    <span class="font-headline italic text-5xl">Studio</span>
+                    <span class="w-2 h-2 bg-white rounded-full"></span>
+                    <span class="font-headline italic text-5xl">Atelier</span>
+                    <span class="w-2 h-2 bg-white rounded-full"></span>
+                    <span class="font-headline italic text-5xl">Enterprise</span>
+                    <span class="w-2 h-2 bg-white rounded-full"></span>
+                    <span class="font-headline italic text-5xl">Venture</span>
+                    <span class="w-2 h-2 bg-white rounded-full"></span>
+                    <span class="font-headline italic text-5xl">Brand</span>
+                    <span class="w-2 h-2 bg-white rounded-full"></span>
+                    <span class="font-headline italic text-5xl">Consortium</span>
+                    <span class="w-2 h-2 bg-white rounded-full"></span>
+                    <span class="font-headline italic text-5xl">Firm</span>
+                    <span class="w-2 h-2 bg-white rounded-full"></span>
+                    <span class="font-headline italic text-5xl">Studio</span>
+                    <span class="w-2 h-2 bg-white rounded-full"></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-32 bg-black relative" role="region" aria-label="Capabilities">
+            <div class="container mx-auto px-6 max-w-7xl">
+                <header class="mb-20 animate-on-scroll">
+                    <span class="text-white/40 uppercase tracking-[0.3em] text-xs font-bold mb-6 block">Capabilities</span>
+                    <h2 class="font-headline italic text-6xl md:text-8xl">More than code.<br/>A digital metamorphosis.</h2>
+                </header>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <article class="liquid-glass p-10 rounded-2xl border-white/5 hover:bg-white/5 transition-colors duration-500 group animate-on-scroll hover-target" role="article">
+                        <div class="text-white/20 text-5xl font-headline italic mb-8 group-hover:text-white transition-colors duration-500">01</div>
+                        <h3 class="text-3xl font-headline italic mb-4">Immersive Web Design</h3>
+                        <p class="text-white/50 text-sm leading-relaxed font-body font-light">We abandon templates to build bespoke, cinematic experiences utilizing WebGL, GSAP, and advanced physics to hold user attention.</p>
+                    </article>
+                    <article class="liquid-glass p-10 rounded-2xl border-white/5 hover:bg-white/5 transition-colors duration-500 group animate-on-scroll hover-target" style="transition-delay: 100ms;" role="article">
+                        <div class="text-white/20 text-5xl font-headline italic mb-8 group-hover:text-white transition-colors duration-500">02</div>
+                        <h3 class="text-3xl font-headline italic mb-4">Conversion Engineering</h3>
+                        <p class="text-white/50 text-sm leading-relaxed font-body font-light">Beauty meets data. Every scroll, click, and interaction is engineered to guide your elite clientele directly to the point of acquisition.</p>
+                    </article>
+                    <article class="liquid-glass p-10 rounded-2xl border-white/5 hover:bg-white/5 transition-colors duration-500 group animate-on-scroll hover-target" style="transition-delay: 200ms;" role="article">
+                        <div class="text-white/20 text-5xl font-headline italic mb-8 group-hover:text-white transition-colors duration-500">03</div>
+                        <h3 class="text-3xl font-headline italic mb-4">Brand Elevation</h3>
+                        <p class="text-white/50 text-sm leading-relaxed font-body font-light">We align your visual identity with your ambition. High-end typography, custom 3D assets, and a cohesive narrative that positions you as the authority.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="relative py-32 bg-black flex items-center justify-center overflow-hidden border-t border-white/10" role="region" aria-label="Our Pipeline">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-20 items-center max-w-7xl">
+                <div class="relative rounded-2xl overflow-hidden liquid-glass aspect-video group animate-on-scroll parallax-container">
+                    <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-100 parallax-media scale-[1.2]">
+                        <source src="https://res.cloudinary.com/ddoqejzwg/video/upload/v1775231560/work1_gmwarv.mp4" type="video/mp4"/>
+                    </video>
+                    <div class="absolute inset-0  group-hover:bg-black/10 transition-colors duration-700 pointer-events-none"></div>
+                </div>
+                <article class="flex flex-col items-start animate-on-scroll" style="transition-delay: 150ms;">
+                    <span class="text-white/40 uppercase tracking-[0.3em] text-xs font-bold mb-6">The Pipeline</span>
+                    <h2 class="font-headline italic text-6xl md:text-8xl mb-8 leading-[0.9]">You dream it.<br/>We ship it.</h2>
+                    <p class="text-white/60 text-lg leading-relaxed mb-10 font-light">
+                        Our streamlined pipeline transforms complex visions into pixel-perfect reality in record time. We bypass the bloat of traditional agencies. No friction, just pure execution.
+                    </p>
+                    <ul class="space-y-4 mb-10 w-full">
+                        <li class="flex items-center gap-4 border-b border-white/10 pb-4">
+                            <span class="text-white/30 font-headline italic text-2xl">A.</span>
+                            <span class="font-medium text-white/80 tracking-wide text-sm">Strategic Discovery & Blueprinting</span>
+                        </li>
+                        <li class="flex items-center gap-4 border-b border-white/10 pb-4">
+                            <span class="text-white/30 font-headline italic text-2xl">B.</span>
+                            <span class="font-medium text-white/80 tracking-wide text-sm">Design & Motion Choreography</span>
+                        </li>
+                        <li class="flex items-center gap-4 border-b border-white/10 pb-4">
+                            <span class="text-white/30 font-headline italic text-2xl">C.</span>
+                            <span class="font-medium text-white/80 tracking-wide text-sm">Development & Edge Deployment</span>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="work" class="py-32 bg-black space-y-48 border-t border-white/10" role="region" aria-label="Case Studies and Performance">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-24 items-center max-w-7xl">
+                <article class="order-2 md:order-1 animate-on-scroll">
+                    <span class="text-white/40 uppercase tracking-[0.3em] text-xs font-bold mb-6 block">Interaction</span>
+                    <h3 class="font-headline italic text-6xl md:text-7xl mb-8 leading-[0.9]">Motion that<br/>commands attention.</h3>
+                    <p class="text-white/60 text-lg mb-12 font-light">We don't just build pages; we choreograph experiences. Every interaction is designed to feel heavy, expensive, and deeply intentional.</p>
+                    <button class="liquid-glass text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-colors duration-300 hover-target">
+                        Explore Animations
+                    </button>
+                </article>
+                <div class="order-1 md:order-2 liquid-glass-strong p-2 rounded-2xl animate-on-scroll parallax-container aspect-[4/5]">
+                    <video class="w-full h-full object-cover rounded-xl parallax-media scale-[1.15]" loop muted playsinline autoplay preload="auto">
+                        <source src="https://res.cloudinary.com/ddoqejzwg/video/upload/v1775231560/work2_jrbeas.mp4" type="video/mp4"/>
+                    </video>
+                </div>
+            </div>
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-24 items-center max-w-7xl">
+                <div class="liquid-glass-strong p-2 rounded-2xl animate-on-scroll parallax-container aspect-[5/3]">
+                    <video class="w-full h-full object-cover rounded-xl parallax-media scale-[1.15]" loop muted playsinline autoplay preload="auto">
+                        <source src="https://res.cloudinary.com/ddoqejzwg/video/upload/v1775231561/work3_pg8abm.mp4" type="video/mp4"/>
+                    </video>
+                </div>
+                <article class="animate-on-scroll" style="transition-delay: 150ms;">
+                    <span class="text-white/40 uppercase tracking-[0.3em] text-xs font-bold mb-6 block">Performance</span>
+                    <h3 class="font-headline italic text-6xl md:text-7xl mb-8 leading-[0.9]">Coded for the<br/>absolute elite.</h3>
+                    <p class="text-white/60 text-lg mb-12 font-light">Performance is the ultimate luxury. Our websites load in the blink of an eye, maintaining a perfect 100 Lighthouse score globally.</p>
+                    <button class="liquid-glass text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-colors duration-300 hover-target">
+                        View Specs
+                    </button>
+                </article>
+            </div>
+        </section>
+
+        <section class="relative py-48 bg-black overflow-hidden flex items-center justify-center border-t border-white/10" role="region" aria-label="Agency Metrics">
+            <video autoplay class="absolute inset-0 w-full h-full object-cover opacity-20 grayscale brightness-50" loop muted playsinline>
+                <source src="https://stream.mux.com/8wrHPCX2dC3msyYU9ObwqNdm00u3ViXvOSHUMRYSEe5Q.m3u8" type="application/x-mpegURL"/>
+            </video>
+            <div class="absolute inset-0 bg-black/60 z-10"></div>
+            <div class="relative z-20 container mx-auto px-6">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-16 text-center">
+                    <div class="animate-on-scroll" role="status">
+                        <div class="font-headline italic text-7xl md:text-8xl mb-4 text-white">70+</div>
+                        <div class="text-white/50 uppercase tracking-[0.2em] text-[10px] font-bold">Brands Launched</div>
+                    </div>
+                    <div class="animate-on-scroll" style="transition-delay: 100ms;" role="status">
+                        <div class="font-headline italic text-7xl md:text-8xl mb-4 text-white">98%</div>
+                        <div class="text-white/50 uppercase tracking-[0.2em] text-[10px] font-bold">Client Satisfaction</div>
+                    </div>
+                    <div class="animate-on-scroll" style="transition-delay: 200ms;" role="status">
+                        <div class="font-headline italic text-7xl md:text-8xl mb-4 text-white">5.2x</div>
+                        <div class="text-white/50 uppercase tracking-[0.2em] text-[10px] font-bold">Avg. Conversion Lift</div>
+                    </div>
+                    <div class="animate-on-scroll" style="transition-delay: 300ms;" role="status">
+                        <div class="font-headline italic text-7xl md:text-8xl mb-4 text-white">&lt;2s</div>
+                        <div class="text-white/50 uppercase tracking-[0.2em] text-[10px] font-bold">Global Load Time</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-32 bg-black border-t border-white/10" role="region" aria-label="Testimonials">
+            <div class="container mx-auto px-6 max-w-7xl">
+                <header class="mb-24 text-center animate-on-scroll">
+                    <h2 class="font-headline italic text-6xl md:text-8xl mb-6">Kind words from<br/>the inner circle.</h2>
+                </header>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <article class="liquid-glass bg-white/5 p-12 rounded-2xl border-white/5 hover:-translate-y-2 transition-transform duration-500 animate-on-scroll" role="review">
+                        <span class="text-4xl text-white/20 font-headline italic mb-6 block">"</span>
+                        <p class="text-2xl font-headline italic text-white/90 mb-10 leading-snug">The level of detail is obsessive. It's the first time our digital presence actually matched the quality of our physical product.</p>
+                        <div class="flex items-center gap-4 mt-auto">
+                            <div class="w-12 h-12 rounded-full bg-surface-container-high overflow-hidden border border-white/20">
+                                <img class="w-full h-full object-cover" data-alt="portrait" src="https://i.pravatar.cc/150?img=11"/>
+                            </div>
+                            <div>
+                                <div class="font-bold text-sm tracking-wide">Rajeev Kinara</div>
+                                <div class="text-white/40 text-[10px] uppercase tracking-widest mt-1">Founder, Aethelgard</div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="liquid-glass bg-white/5 p-12 rounded-2xl border-white/5 hover:-translate-y-2 transition-transform duration-500 animate-on-scroll" style="transition-delay: 100ms;" role="review">
+                        <span class="text-4xl text-white/20 font-headline italic mb-6 block">"</span>
+                        <p class="text-2xl font-headline italic text-white/90 mb-10 leading-snug">Speed used to be a compromise. With 36 Studios, we got a cinematic experience that loads faster than a basic SaaS template.</p>
+                        <div class="flex items-center gap-4 mt-auto">
+                            <div class="w-12 h-12 rounded-full bg-surface-container-high overflow-hidden border border-white/20">
+                                <img class="w-full h-full object-cover" data-alt="portrait" src="https://i.pravatar.cc/150?img=33"/>
+                            </div>
+                            <div>
+                                <div class="font-bold text-sm tracking-wide">Manoj Sharma</div>
+                                <div class="text-white/40 text-[10px] uppercase tracking-widest mt-1">Co-Founder, Veloura</div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="liquid-glass bg-white/5 p-12 rounded-2xl border-white/5 hover:-translate-y-2 transition-transform duration-500 animate-on-scroll" style="transition-delay: 200ms;" role="review">
+                        <span class="text-4xl text-white/20 font-headline italic mb-6 block">"</span>
+                        <p class="text-2xl font-headline italic text-white/90 mb-10 leading-snug">They don't just design; they curate. Every pixel feels like it has a purpose. Truly the undisputed best in the industry right now.</p>
+                        <div class="flex items-center gap-4 mt-auto">
+                            <div class="w-12 h-12 rounded-full bg-surface-container-high overflow-hidden border border-white/20">
+                                <img class="w-full h-full object-cover" data-alt="portrait" src="https://i.pravatar.cc/150?img=44"/>
+                            </div>
+                            <div>
+                                <div class="font-bold text-sm tracking-wide">Inaya Khan</div>
+                                <div class="text-white/40 text-[10px] uppercase tracking-widest mt-1">CTO, Verity Labs</div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="py-32 bg-black border-t border-white/10" role="region" aria-label="Frequently Asked Questions">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <header class="mb-16 text-center animate-on-scroll">
+                    <span class="text-white/40 uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Clarity</span>
+                    <h2 class="font-headline italic text-6xl">Frequently Asked</h2>
+                </header>
+                
+                <div class="space-y-4">
+                    <article class="faq-item border-b border-white/10 pb-6 animate-on-scroll" role="region" aria-label="FAQ Item">
+                        <button class="faq-toggle w-full flex justify-between items-center text-left py-4 hover-target group">
+                            <span class="text-xl md:text-2xl font-headline italic group-hover:text-white/80 transition-colors">How long does a typical build take?</span>
+                            <span class="material-symbols-outlined transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">add</span>
+                        </button>
+                        <div class="faq-content overflow-hidden max-h-0 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+                            <p class="text-white/60 font-body text-sm leading-relaxed pt-4 pb-2 pr-12">
+                                Because we bypass traditional agency bloat and bloated builders, most premium experiences are deployed within 2 to 4 weeks, depending on complexity.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="faq-item border-b border-white/10 pb-6 animate-on-scroll" role="region" aria-label="FAQ Item">
+                        <button class="faq-toggle w-full flex justify-between items-center text-left py-4 hover-target group">
+                            <span class="text-xl md:text-2xl font-headline italic group-hover:text-white/80 transition-colors">Do you work with startups or just established enterprises?</span>
+                            <span class="material-symbols-outlined transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">add</span>
+                        </button>
+                        <div class="faq-content overflow-hidden max-h-0 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+                            <p class="text-white/60 font-body text-sm leading-relaxed pt-4 pb-2 pr-12">
+                                We work with ambitious founders. Whether you're an enterprise looking to modernize or a funded startup needing to establish immediate authority, if the vision is grand, we build it.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="faq-item border-b border-white/10 pb-6 animate-on-scroll" role="region" aria-label="FAQ Item">
+                        <button class="faq-toggle w-full flex justify-between items-center text-left py-4 hover-target group">
+                            <span class="text-xl md:text-2xl font-headline italic group-hover:text-white/80 transition-colors">What tech stack do you use?</span>
+                            <span class="material-symbols-outlined transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">add</span>
+                        </button>
+                        <div class="faq-content overflow-hidden max-h-0 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+                            <p class="text-white/60 font-body text-sm leading-relaxed pt-4 pb-2 pr-12">
+                                We build on the edge. Typically this means Next.js/React or highly optimized Vanilla HTML/JS environments, styled with Tailwind, animated by GSAP/WebGL, and hosted on Vercel or AWS for zero-latency loading.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative pt-64 pb-12 bg-black overflow-hidden flex flex-col items-center text-center" role="region" aria-label="Call to Action and Footer">
+            <video autoplay class="absolute top-0 left-0 w-full h-full object-cover opacity-30 grayscale" loop muted playsinline>
+                <source src="https://stream.mux.com/NcU3HlHeF7CUL86azTTzpy3Tlb00d6iF3BmCdFslMJYM.m3u8" type="application/x-mpegURL"/>
+            </video>
+            <div class="absolute inset-0 bg-gradient-to-b from-black via-black/50 to-black z-10"></div>
+            <div class="relative z-20 container mx-auto px-6 flex flex-col items-center">
+                <h2 class="font-headline italic text-7xl md:text-[12rem] mb-12 tracking-tighter text-white drop-shadow-2xl">Your next website<br/>starts here.</h2>
+                <button class="inquire-trigger bg-white text-black px-16 py-6 rounded-full text-sm font-bold uppercase tracking-[0.2em] mb-40 hover:scale-110 transition-transform duration-500 shadow-[0_0_40px_rgba(255,255,255,0.3)] hover-target">
                     Start Curation
                 </button>
-                <a href="#work" class="liquid-glass text-white px-10 py-4 rounded-full text-xs font-bold uppercase tracking-[0.2em] border border-white/20 hover:bg-white/10 transition-colors duration-500 hover-target text-center">
-                    View Work
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-12 border-y border-white/10 overflow-hidden flex flex-col items-center justify-center z-20 relative bg-black">
-        <div class="marquee-container w-full max-w-full">
-            <div class="marquee-content flex gap-16 items-center opacity-40 hover:opacity-100 transition-opacity duration-700">
-                <span class="font-headline italic text-5xl">Atelier</span>
-                <span class="w-2 h-2 bg-white rounded-full"></span>
-                <span class="font-headline italic text-5xl">Enterprise</span>
-                <span class="w-2 h-2 bg-white rounded-full"></span>
-                <span class="font-headline italic text-5xl">Venture</span>
-                <span class="w-2 h-2 bg-white rounded-full"></span>
-                <span class="font-headline italic text-5xl">Brand</span>
-                <span class="w-2 h-2 bg-white rounded-full"></span>
-                <span class="font-headline italic text-5xl">Consortium</span>
-                <span class="w-2 h-2 bg-white rounded-full"></span>
-                <span class="font-headline italic text-5xl">Firm</span>
-                <span class="w-2 h-2 bg-white rounded-full"></span>
-                <span class="font-headline italic text-5xl">Studio</span>
-                <span class="w-2 h-2 bg-white rounded-full"></span>
-                <span class="font-headline italic text-5xl">Atelier</span>
-                <span class="w-2 h-2 bg-white rounded-full"></span>
-                <span class="font-headline italic text-5xl">Enterprise</span>
-                <span class="w-2 h-2 bg-white rounded-full"></span>
-                <span class="font-headline italic text-5xl">Venture</span>
-                <span class="w-2 h-2 bg-white rounded-full"></span>
-                <span class="font-headline italic text-5xl">Brand</span>
-                <span class="w-2 h-2 bg-white rounded-full"></span>
-                <span class="font-headline italic text-5xl">Consortium</span>
-                <span class="w-2 h-2 bg-white rounded-full"></span>
-                <span class="font-headline italic text-5xl">Firm</span>
-                <span class="w-2 h-2 bg-white rounded-full"></span>
-                <span class="font-headline italic text-5xl">Studio</span>
-                <span class="w-2 h-2 bg-white rounded-full"></span>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="py-32 bg-black relative">
-        <div class="container mx-auto px-6 max-w-7xl">
-            <div class="mb-20 animate-on-scroll">
-                <span class="text-white/40 uppercase tracking-[0.3em] text-xs font-bold mb-6 block">Capabilities</span>
-                <h2 class="font-headline italic text-6xl md:text-8xl">More than code.<br/>A digital metamorphosis.</h2>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="liquid-glass p-10 rounded-2xl border-white/5 hover:bg-white/5 transition-colors duration-500 group animate-on-scroll hover-target">
-                    <div class="text-white/20 text-5xl font-headline italic mb-8 group-hover:text-white transition-colors duration-500">01</div>
-                    <h3 class="text-3xl font-headline italic mb-4">Immersive Web Design</h3>
-                    <p class="text-white/50 text-sm leading-relaxed font-body font-light">We abandon templates to build bespoke, cinematic experiences utilizing WebGL, GSAP, and advanced physics to hold user attention.</p>
-                </div>
-                <div class="liquid-glass p-10 rounded-2xl border-white/5 hover:bg-white/5 transition-colors duration-500 group animate-on-scroll hover-target" style="transition-delay: 100ms;">
-                    <div class="text-white/20 text-5xl font-headline italic mb-8 group-hover:text-white transition-colors duration-500">02</div>
-                    <h3 class="text-3xl font-headline italic mb-4">Conversion Engineering</h3>
-                    <p class="text-white/50 text-sm leading-relaxed font-body font-light">Beauty meets data. Every scroll, click, and interaction is engineered to guide your elite clientele directly to the point of acquisition.</p>
-                </div>
-                <div class="liquid-glass p-10 rounded-2xl border-white/5 hover:bg-white/5 transition-colors duration-500 group animate-on-scroll hover-target" style="transition-delay: 200ms;">
-                    <div class="text-white/20 text-5xl font-headline italic mb-8 group-hover:text-white transition-colors duration-500">03</div>
-                    <h3 class="text-3xl font-headline italic mb-4">Brand Elevation</h3>
-                    <p class="text-white/50 text-sm leading-relaxed font-body font-light">We align your visual identity with your ambition. High-end typography, custom 3D assets, and a cohesive narrative that positions you as the authority.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="process" class="relative py-32 bg-black flex items-center justify-center overflow-hidden border-t border-white/10">
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-20 items-center max-w-7xl">
-            <div class="relative rounded-2xl overflow-hidden liquid-glass aspect-video group animate-on-scroll parallax-container">
-                <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-100 parallax-media scale-[1.2]">
-                    <source src="https://res.cloudinary.com/ddoqejzwg/video/upload/v1775231560/work1_gmwarv.mp4" type="video/mp4"/>
-                </video>
-                <div class="absolute inset-0  group-hover:bg-black/10 transition-colors duration-700 pointer-events-none"></div>
-            </div>
-            <div class="flex flex-col items-start animate-on-scroll" style="transition-delay: 150ms;">
-                <span class="text-white/40 uppercase tracking-[0.3em] text-xs font-bold mb-6">The Pipeline</span>
-                <h2 class="font-headline italic text-6xl md:text-8xl mb-8 leading-[0.9]">You dream it.<br/>We ship it.</h2>
-                <p class="text-white/60 text-lg leading-relaxed mb-10 font-light">
-                    Our streamlined pipeline transforms complex visions into pixel-perfect reality in record time. We bypass the bloat of traditional agencies. No friction, just pure execution.
-                </p>
-                <ul class="space-y-4 mb-10 w-full">
-                    <li class="flex items-center gap-4 border-b border-white/10 pb-4">
-                        <span class="text-white/30 font-headline italic text-2xl">A.</span>
-                        <span class="font-medium text-white/80 tracking-wide text-sm">Strategic Discovery & Blueprinting</span>
-                    </li>
-                    <li class="flex items-center gap-4 border-b border-white/10 pb-4">
-                        <span class="text-white/30 font-headline italic text-2xl">B.</span>
-                        <span class="font-medium text-white/80 tracking-wide text-sm">Design & Motion Choreography</span>
-                    </li>
-                    <li class="flex items-center gap-4 border-b border-white/10 pb-4">
-                        <span class="text-white/30 font-headline italic text-2xl">C.</span>
-                        <span class="font-medium text-white/80 tracking-wide text-sm">Development & Edge Deployment</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="work" class="py-32 bg-black space-y-48 border-t border-white/10">
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-24 items-center max-w-7xl">
-            <div class="order-2 md:order-1 animate-on-scroll">
-                <span class="text-white/40 uppercase tracking-[0.3em] text-xs font-bold mb-6 block">Interaction</span>
-                <h3 class="font-headline italic text-6xl md:text-7xl mb-8 leading-[0.9]">Motion that<br/>commands attention.</h3>
-                <p class="text-white/60 text-lg mb-12 font-light">We don't just build pages; we choreograph experiences. Every interaction is designed to feel heavy, expensive, and deeply intentional.</p>
-                <button class="liquid-glass text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-colors duration-300 hover-target">
-                    Explore Animations
-                </button>
-            </div>
-            <div class="order-1 md:order-2 liquid-glass-strong p-2 rounded-2xl animate-on-scroll parallax-container aspect-[4/5]">
-                <video class="w-full h-full object-cover rounded-xl parallax-media scale-[1.15]" loop muted playsinline autoplay preload="auto">
-                    <source src="https://res.cloudinary.com/ddoqejzwg/video/upload/v1775231560/work2_jrbeas.mp4" type="video/mp4"/>
-                </video>
-            </div>
-        </div>
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-24 items-center max-w-7xl">
-            <div class="liquid-glass-strong p-2 rounded-2xl animate-on-scroll parallax-container aspect-[5/3]">
-                <video class="w-full h-full object-cover rounded-xl parallax-media scale-[1.15]" loop muted playsinline autoplay preload="auto">
-                    <source src="https://res.cloudinary.com/ddoqejzwg/video/upload/v1775231561/work3_pg8abm.mp4" type="video/mp4"/>
-                </video>
-            </div>
-            <div class="animate-on-scroll" style="transition-delay: 150ms;">
-                <span class="text-white/40 uppercase tracking-[0.3em] text-xs font-bold mb-6 block">Performance</span>
-                <h3 class="font-headline italic text-6xl md:text-7xl mb-8 leading-[0.9]">Coded for the<br/>absolute elite.</h3>
-                <p class="text-white/60 text-lg mb-12 font-light">Performance is the ultimate luxury. Our websites load in the blink of an eye, maintaining a perfect 100 Lighthouse score globally.</p>
-                <button class="liquid-glass text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-colors duration-300 hover-target">
-                    View Specs
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <section class="relative py-48 bg-black overflow-hidden flex items-center justify-center border-t border-white/10">
-        <video autoplay class="absolute inset-0 w-full h-full object-cover opacity-20 grayscale brightness-50" loop muted playsinline>
-            <source src="https://stream.mux.com/8wrHPCX2dC3msyYU9ObwqNdm00u3ViXvOSHUMRYSEe5Q.m3u8" type="application/x-mpegURL"/>
-        </video>
-        <div class="absolute inset-0 bg-black/60 z-10"></div>
-        <div class="relative z-20 container mx-auto px-6">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-16 text-center">
-                <div class="animate-on-scroll">
-                    <div class="font-headline italic text-7xl md:text-8xl mb-4 text-white">70+</div>
-                    <div class="text-white/50 uppercase tracking-[0.2em] text-[10px] font-bold">Brands Launched</div>
-                </div>
-                <div class="animate-on-scroll" style="transition-delay: 100ms;">
-                    <div class="font-headline italic text-7xl md:text-8xl mb-4 text-white">98%</div>
-                    <div class="text-white/50 uppercase tracking-[0.2em] text-[10px] font-bold">Client Satisfaction</div>
-                </div>
-                <div class="animate-on-scroll" style="transition-delay: 200ms;">
-                    <div class="font-headline italic text-7xl md:text-8xl mb-4 text-white">5.2x</div>
-                    <div class="text-white/50 uppercase tracking-[0.2em] text-[10px] font-bold">Avg. Conversion Lift</div>
-                </div>
-                <div class="animate-on-scroll" style="transition-delay: 300ms;">
-                    <div class="font-headline italic text-7xl md:text-8xl mb-4 text-white">&lt;2s</div>
-                    <div class="text-white/50 uppercase tracking-[0.2em] text-[10px] font-bold">Global Load Time</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-32 bg-black border-t border-white/10">
-        <div class="container mx-auto px-6 max-w-7xl">
-            <div class="mb-24 text-center animate-on-scroll">
-                <h2 class="font-headline italic text-6xl md:text-8xl mb-6">Kind words from<br/>the inner circle.</h2>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="liquid-glass bg-white/5 p-12 rounded-2xl border-white/5 hover:-translate-y-2 transition-transform duration-500 animate-on-scroll">
-                    <span class="text-4xl text-white/20 font-headline italic mb-6 block">"</span>
-                    <p class="text-2xl font-headline italic text-white/90 mb-10 leading-snug">The level of detail is obsessive. It's the first time our digital presence actually matched the quality of our physical product.</p>
-                    <div class="flex items-center gap-4 mt-auto">
-                        <div class="w-12 h-12 rounded-full bg-surface-container-high overflow-hidden border border-white/20">
-                            <img class="w-full h-full object-cover" data-alt="portrait" src="https://i.pravatar.cc/150?img=11"/>
-                        </div>
-                        <div>
-                            <div class="font-bold text-sm tracking-wide">Rajeev Kinara</div>
-                            <div class="text-white/40 text-[10px] uppercase tracking-widest mt-1">Founder, Aethelgard</div>
-                        </div>
+                
+                <footer class="w-full border-t border-white/10 pt-12 flex flex-col items-center max-w-6xl" role="contentinfo">
+                    <div class="text-5xl italic font-headline text-white mb-8">36 Studios</div>
+                    <div class="flex flex-wrap justify-center gap-8 md:gap-16 mb-12 text-white/50 text-[11px] font-bold uppercase tracking-[0.2em]">
+                        <a class="inquire-trigger hover:text-white transition-colors cursor-pointer hover-target">Contact Us</a>
+                        <a class="hover:text-white transition-colors hover-target" target="_blank" href="https://mayanshbangali.vercel.app/">Developement: Mayansh Bangali</a>
                     </div>
-                </div>
-                <div class="liquid-glass bg-white/5 p-12 rounded-2xl border-white/5 hover:-translate-y-2 transition-transform duration-500 animate-on-scroll" style="transition-delay: 100ms;">
-                    <span class="text-4xl text-white/20 font-headline italic mb-6 block">"</span>
-                    <p class="text-2xl font-headline italic text-white/90 mb-10 leading-snug">Speed used to be a compromise. With 36 Studios, we got a cinematic experience that loads faster than a basic SaaS template.</p>
-                    <div class="flex items-center gap-4 mt-auto">
-                        <div class="w-12 h-12 rounded-full bg-surface-container-high overflow-hidden border border-white/20">
-                            <img class="w-full h-full object-cover" data-alt="portrait" src="https://i.pravatar.cc/150?img=33"/>
-                        </div>
-                        <div>
-                            <div class="font-bold text-sm tracking-wide">Manoj Sharma</div>
-                            <div class="text-white/40 text-[10px] uppercase tracking-widest mt-1">Co-Founder, Veloura</div>
-                        </div>
+                    <div class="text-white/20 text-[10px] uppercase tracking-[0.3em]">
+                        © 2026 36 STUDIOS. ALL RIGHTS RESERVED. CRAFTED IN THE VOID.
                     </div>
-                </div>
-                <div class="liquid-glass bg-white/5 p-12 rounded-2xl border-white/5 hover:-translate-y-2 transition-transform duration-500 animate-on-scroll" style="transition-delay: 200ms;">
-                    <span class="text-4xl text-white/20 font-headline italic mb-6 block">"</span>
-                    <p class="text-2xl font-headline italic text-white/90 mb-10 leading-snug">They don't just design; they curate. Every pixel feels like it has a purpose. Truly the undisputed best in the industry right now.</p>
-                    <div class="flex items-center gap-4 mt-auto">
-                        <div class="w-12 h-12 rounded-full bg-surface-container-high overflow-hidden border border-white/20">
-                            <img class="w-full h-full object-cover" data-alt="portrait" src="https://i.pravatar.cc/150?img=44"/>
-                        </div>
-                        <div>
-                            <div class="font-bold text-sm tracking-wide">Inaya Khan</div>
-                            <div class="text-white/40 text-[10px] uppercase tracking-widest mt-1">CTO, Verity Labs</div>
-                        </div>
-                    </div>
-                </div>
+                </footer>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <section id="faq" class="py-32 bg-black border-t border-white/10">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <div class="mb-16 text-center animate-on-scroll">
-                <span class="text-white/40 uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Clarity</span>
-                <h2 class="font-headline italic text-6xl">Frequently Asked</h2>
-            </div>
-            
-            <div class="space-y-4">
-                <div class="faq-item border-b border-white/10 pb-6 animate-on-scroll">
-                    <button class="faq-toggle w-full flex justify-between items-center text-left py-4 hover-target group">
-                        <span class="text-xl md:text-2xl font-headline italic group-hover:text-white/80 transition-colors">How long does a typical build take?</span>
-                        <span class="material-symbols-outlined transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">add</span>
-                    </button>
-                    <div class="faq-content overflow-hidden max-h-0 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
-                        <p class="text-white/60 font-body text-sm leading-relaxed pt-4 pb-2 pr-12">
-                            Because we bypass traditional agency bloat and bloated builders, most premium experiences are deployed within 2 to 4 weeks, depending on complexity.
-                        </p>
-                    </div>
-                </div>
-                <div class="faq-item border-b border-white/10 pb-6 animate-on-scroll">
-                    <button class="faq-toggle w-full flex justify-between items-center text-left py-4 hover-target group">
-                        <span class="text-xl md:text-2xl font-headline italic group-hover:text-white/80 transition-colors">Do you work with startups or just established enterprises?</span>
-                        <span class="material-symbols-outlined transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">add</span>
-                    </button>
-                    <div class="faq-content overflow-hidden max-h-0 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
-                        <p class="text-white/60 font-body text-sm leading-relaxed pt-4 pb-2 pr-12">
-                            We work with ambitious founders. Whether you're an enterprise looking to modernize or a funded startup needing to establish immediate authority, if the vision is grand, we build it.
-                        </p>
-                    </div>
-                </div>
-                <div class="faq-item border-b border-white/10 pb-6 animate-on-scroll">
-                    <button class="faq-toggle w-full flex justify-between items-center text-left py-4 hover-target group">
-                        <span class="text-xl md:text-2xl font-headline italic group-hover:text-white/80 transition-colors">What tech stack do you use?</span>
-                        <span class="material-symbols-outlined transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">add</span>
-                    </button>
-                    <div class="faq-content overflow-hidden max-h-0 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
-                        <p class="text-white/60 font-body text-sm leading-relaxed pt-4 pb-2 pr-12">
-                            We build on the edge. Typically this means Next.js/React or highly optimized Vanilla HTML/JS environments, styled with Tailwind, animated by GSAP/WebGL, and hosted on Vercel or AWS for zero-latency loading.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="relative pt-64 pb-12 bg-black overflow-hidden flex flex-col items-center text-center">
-        <video autoplay class="absolute top-0 left-0 w-full h-full object-cover opacity-30 grayscale" loop muted playsinline>
-            <source src="https://stream.mux.com/NcU3HlHeF7CUL86azTTzpy3Tlb00d6iF3BmCdFslMJYM.m3u8" type="application/x-mpegURL"/>
-        </video>
-        <div class="absolute inset-0 bg-gradient-to-b from-black via-black/50 to-black z-10"></div>
-        <div class="relative z-20 container mx-auto px-6 flex flex-col items-center">
-            <h2 class="font-headline italic text-7xl md:text-[12rem] mb-12 tracking-tighter text-white drop-shadow-2xl">Your next website<br/>starts here.</h2>
-            <button class="inquire-trigger bg-white text-black px-16 py-6 rounded-full text-sm font-bold uppercase tracking-[0.2em] mb-40 hover:scale-110 transition-transform duration-500 shadow-[0_0_40px_rgba(255,255,255,0.3)] hover-target">
-                Start Curation
-            </button>
-            
-            <footer class="w-full border-t border-white/10 pt-12 flex flex-col items-center max-w-6xl">
-                <div class="text-5xl italic font-headline text-white mb-8">36 Studios</div>
-                <div class="flex flex-wrap justify-center gap-8 md:gap-16 mb-12 text-white/50 text-[11px] font-bold uppercase tracking-[0.2em]">
-                    <a class="inquire-trigger hover:text-white transition-colors cursor-pointer hover-target">Contact Us</a>
-                    <a class="hover:text-white transition-colors hover-target" target="_blank" href="https://mayanshbangali.vercel.app/">Developement: Mayansh Bangali</a>
-                </div>
-                <div class="text-white/20 text-[10px] uppercase tracking-[0.3em]">
-                    © 2026 36 STUDIOS. ALL RIGHTS RESERVED. CRAFTED IN THE VOID.
-                </div>
-            </footer>
-        </div>
-    </section>
-
-    <div id="inquireModal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-xl opacity-0 pointer-events-none transition-all duration-500">
+    <div id="inquireModal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-xl opacity-0 pointer-events-none transition-all duration-500" role="dialog" aria-modal="true" aria-hidden="true">
         <div id="inquireModalContent" class="liquid-glass-strong p-12 rounded-3xl max-w-md w-[90%] border border-white/20 relative transform scale-95 transition-transform duration-500 shadow-2xl">
             <button id="closeModal" class="absolute top-6 right-6 text-white/50 hover:text-white transition-colors hover-target bg-white/5 rounded-full p-2">
                 <span class="material-symbols-outlined block">close</span>

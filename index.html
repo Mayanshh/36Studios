@@ -205,12 +205,12 @@
     <div class="cursor-outline hidden md:block"></div>
 
     <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between max-w-6xl px-8 rounded-full mt-6 mx-auto w-[95%] lg:w-[45%] py-4 bg-white/5 dark:bg-black/20 backdrop-blur-2xl border border-white/10 shadow-[0_20px_80px_rgba(0,0,0,0.8)] transition-all duration-500 will-change-transform" id="navbar" role="navigation" aria-label="Main Navigation">
-        <div class="font-headline italic text-3xl tracking-tighter text-white mr-12 hover-target">36 Studios</div>
+        <a href="/" class="font-headline italic text-3xl tracking-tighter text-white mr-12 hover-target">36 Studios</a>
         <div class="hidden md:flex items-center gap-10 mr-12">
-            <a class="text-white/60 font-medium text-sm tracking-wide hover:text-white transition-colors duration-300 hover-target" href="#services">Services</a>
-            <a class="text-white/60 font-medium text-sm tracking-wide hover:text-white transition-colors duration-300 hover-target" href="#process">Process</a>
-            <a class="text-white/60 font-medium text-sm tracking-wide hover:text-white transition-colors duration-300 hover-target" href="#work">Work</a>
-            <a class="text-white/60 font-medium text-sm tracking-wide hover:text-white transition-colors duration-300 hover-target" href="#faq">FAQ</a>
+            <a class="text-white/60 font-medium text-sm tracking-wide hover:text-white transition-colors duration-300 hover-target" href="/#services">Services</a>
+            <a class="text-white/60 font-medium text-sm tracking-wide hover:text-white transition-colors duration-300 hover-target" href="/#process">Process</a>
+            <a class="text-white/60 font-medium text-sm tracking-wide hover:text-white transition-colors duration-300 hover-target" href="/#work">Work</a>
+            <a class="text-white/60 font-medium text-sm tracking-wide hover:text-white transition-colors duration-300 hover-target" href="/#faq">FAQ</a>
         </div>
         <button class="inquire-trigger bg-white text-black font-semibold text-[11px] uppercase tracking-[0.2em] px-8 py-3 rounded-full hover:scale-105 transition-transform duration-500 hover-target shadow-[0_0_20px_rgba(255,255,255,0.2)]">
             Inquire
@@ -235,7 +235,7 @@
                     <button class="inquire-trigger bg-white text-black px-10 py-4 rounded-full text-xs font-bold uppercase tracking-[0.2em] hover:scale-105 transition-transform duration-500 hover-target">
                         Start Curation
                     </button>
-                    <a href="#work" class="liquid-glass text-white px-10 py-4 rounded-full text-xs font-bold uppercase tracking-[0.2em] border border-white/20 hover:bg-white/10 transition-colors duration-500 hover-target text-center">
+                    <a href="/#work" class="liquid-glass text-white px-10 py-4 rounded-full text-xs font-bold uppercase tracking-[0.2em] border border-white/20 hover:bg-white/10 transition-colors duration-500 hover-target text-center">
                         View Work
                     </a>
                 </div>
@@ -502,7 +502,7 @@
                 </button>
                 
                 <footer class="w-full border-t border-white/10 pt-12 flex flex-col items-center max-w-6xl" role="contentinfo">
-                    <div class="text-5xl italic font-headline text-white mb-8">36 Studios</div>
+                    <a href="/" class="text-5xl italic font-headline text-white mb-8 hover-target">36 Studios</a>
                     <div class="flex flex-wrap justify-center gap-8 md:gap-16 mb-12 text-white/50 text-[11px] font-bold uppercase tracking-[0.2em]">
                         <a class="inquire-trigger hover:text-white transition-colors cursor-pointer hover-target">Contact Us</a>
                         <a class="hover:text-white transition-colors hover-target" target="_blank" href="https://mayanshbangali.vercel.app/">Developement: Mayansh Bangali</a>
@@ -741,22 +741,36 @@
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape' && !modal.classList.contains('opacity-0')) closeModal();
             });
-        });
-    </script>
-  
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+
+            // -------------------------
+            // 7. FIXED: Intelligent Smooth Scroll Integration with Lenis (Multi-page Support)
+            // -------------------------
+            document.querySelectorAll('a[href*="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    const hashIndex = href.indexOf('#');
+                    
+                    if (hashIndex !== -1) {
+                        const hash = href.substring(hashIndex);
+                        const targetElement = document.querySelector(hash);
+                        
+                        // If the target section exists on this active document view, smoothly scroll via Lenis
+                        if (targetElement) {
+                            e.preventDefault();
+                            lenis.scrollTo(targetElement, {
+                                duration: 1.2,
+                                force: true
+                            });
+                        }
+                        // If the target element is missing locally, do not block the event; let standard multi-page browser routing drop back to root index
+                    }
                 });
             });
         });
     </script>
     <script>
-  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-</script>
-<script defer src="/_vercel/insights/script.js"></script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

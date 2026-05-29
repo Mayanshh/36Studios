@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    
+    <title>The Atelier | 36 Studios</title>
+    <meta name="description" content="Explore the ideology, execution framework, and structural rules inside 36 Studios. Deeply intentional digital engineering.">
+    <meta name="robots" content="index, follow">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Barlow:wght@300;400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ffffff",
+                        "surface-container-high": "#2a2a2a",
+                    },
+                    fontFamily: {
+                        "headline": ["'Instrument Serif'", "serif"],
+                        "body": ["'Barlow'", "sans-serif"],
+                    }
+                },
+            },
+        }
+    </script>
+
+    <style>
+        @layer utilities {
+            .liquid-glass {
+                background: rgba(255, 255, 255, 0.02);
+                backdrop-filter: blur(16px);
+                -webkit-backdrop-filter: blur(16px);
+            }
+            .liquid-glass-strong {
+                background: rgba(255, 255, 255, 0.05);
+                backdrop-filter: blur(40px);
+                -webkit-backdrop-filter: blur(40px);
+            }
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Barlow', sans-serif;
+            overflow-x: hidden;
+            overscroll-behavior-y: none; 
+        }
+
+        @media (pointer: fine) {
+            body, a, button, input, textarea {
+                cursor: none !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        * {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .noise {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 9999;
+            background: url('data:image/svg+xml;utf8,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E');
+            opacity: 0.04;
+        }
+
+        .cursor-dot, .cursor-outline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: translate3d(-50%, -50%, 0);
+            pointer-events: none;
+            z-index: 10000;
+            will-change: transform, width, height;
+            border-radius: 50%;
+        }
+
+        .cursor-dot {
+            width: 6px;
+            height: 6px;
+            background-color: white;
+            transition: width 0.2s cubic-bezier(0.16, 1, 0.3, 1), height 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .cursor-outline {
+            width: 30px;
+            height: 30px;
+            border: 1px solid rgba(255,255,255,0.4);
+            z-index: 9999;
+            transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s, background-color 0.3s, backdrop-filter 0.3s;
+        }
+
+        .cursor-hover .cursor-dot {
+            width: 0px;
+            height: 0px;
+        }
+        .cursor-hover .cursor-outline {
+            width: 55px;
+            height: 55px;
+            background-color: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.8);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translate3d(0, 40px, 0);
+            will-change: transform, opacity;
+        }
+    </style>
+</head>
+<body class="selection:bg-white selection:text-black bg-black text-white antialiased">
+
+    <div class="noise"></div>
+    <div class="cursor-dot hidden md:block"></div>
+    <div class="cursor-outline hidden md:block"></div>
+
+    <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between max-w-6xl px-8 rounded-full mt-6 mx-auto w-[95%] lg:w-[45%] py-4 bg-white/5 dark:bg-black/20 backdrop-blur-2xl border border-white/10 shadow-[0_20px_80px_rgba(0,0,0,0.8)] transition-all duration-500 will-change-transform" id="navbar" role="navigation">
+        <a href="../index.html" class="font-headline italic text-3xl tracking-tighter text-white mr-12 hover-target">36 Studios</a>
+        <div class="hidden md:flex items-center gap-10 mr-12">
+            <a class="text-white/60 font-medium text-sm tracking-wide hover:text-white transition-colors duration-300 hover-target" href="../index.html">Home</a>
+        </div>
+        <button class="inquire-trigger bg-white text-black font-semibold text-[11px] uppercase tracking-[0.2em] px-8 py-3 rounded-full hover:scale-105 transition-transform duration-500 hover-target shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+            Inquire
+        </button>
+    </nav>
+
+    <main role="main">
+        <section class="min-h-screen flex flex-col justify-center pt-40 pb-20 relative">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <span class="text-white/40 uppercase tracking-[0.3em] text-xs font-bold mb-6 block animate-on-scroll">The Manifesto</span>
+                <h1 class="font-headline italic text-6xl md:text-[9rem] leading-[0.85] tracking-tighter mb-16 max-w-5xl animate-on-scroll">
+                    Reject the Standard. Command the Void.
+                </h1>
+                
+                <div class="grid md:grid-cols-5 gap-12 pt-12 border-t border-white/10 items-start">
+                    <div class="md:col-span-2 text-white/40 uppercase tracking-[0.2em] text-xs font-bold font-body animate-on-scroll">
+                        Our Core Philosophy
+                    </div>
+                    <div class="md:col-span-3 space-y-6 text-xl font-light text-white/80 leading-relaxed animate-on-scroll" style="transition-delay: 100ms;">
+                        <p>
+                            Traditional digital agencies rely heavily on excessive operational structures, template components, and bureaucratic frameworks that slow development and dilute bold branding.
+                        </p>
+                        <p>
+                            At 36 Studios, we curate instead of managing. We maintain a laser-focused execution environment stripped of standard administrative friction. If an interface component doesn’t amplify user retention metrics or evoke deep emotional resonance, it is systematically eliminated.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-32 bg-zinc-950 border-y border-white/5 relative z-20">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <header class="mb-24 animate-on-scroll">
+                    <span class="text-white/40 uppercase tracking-[0.3em] text-xs font-bold mb-6 block">Structural Framework</span>
+                    <h2 class="font-headline italic text-5xl md:text-7xl">Three Architectural Rules We Never Violate.</h2>
+                </header>
+
+                <div class="grid md:grid-cols-3 gap-12">
+                    <div class="animate-on-scroll">
+                        <div class="font-headline italic text-8xl text-white/10 mb-4">I.</div>
+                        <h3 class="text-2xl font-semibold mb-4">Obsessive Layout Cleanliness</h3>
+                        <p class="text-white/50 text-sm font-light leading-relaxed font-body">We protect screen balance carefully. Negative grid space isn't an empty viewport—it acts as an intentional graphic variable designed to direct the user's attention seamlessly toward interactive endpoints.</p>
+                    </div>
+
+                    <div class="animate-on-scroll" style="transition-delay: 100ms;">
+                        <div class="font-headline italic text-8xl text-white/10 mb-4">II.</div>
+                        <h3 class="text-2xl font-semibold mb-4">Performance as an Art</h3>
+                        <p class="text-white/50 text-sm font-light leading-relaxed font-body">A complex website that introduces transition lag is a design failure. We write minimal structural frameworks from scratch, keeping critical asset rendering speeds inside extreme microsecond parameters.</p>
+                    </div>
+
+                    <div class="animate-on-scroll" style="transition-delay: 200ms;">
+                        <div class="font-headline italic text-8xl text-white/10 mb-4">III.</div>
+                        <h3 class="text-2xl font-semibold mb-4">Pure Asset Accountability</h3>
+                        <p class="text-white/50 text-sm font-light leading-relaxed font-body">Every geometric primitive, micro-interaction sequence, typography shift, and backdrop blur element exists for a singular purpose: establishing distinct market authority for founders.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative py-48 bg-black overflow-hidden flex flex-col items-center text-center">
+            <div class="relative z-20 container mx-auto px-6 flex flex-col items-center">
+                <h2 class="font-headline italic text-6xl md:text-[10rem] mb-12 tracking-tighter text-white drop-shadow-2xl">Shape your online existence.</h2>
+                <button class="inquire-trigger bg-white text-black px-16 py-6 rounded-full text-sm font-bold uppercase tracking-[0.2em] hover:scale-110 transition-transform duration-500 shadow-[0_0_40px_rgba(255,255,255,0.3)] hover-target">
+                    Access Curation Channel
+                </button>
+                
+                <footer class="w-full border-t border-white/10 pt-12 flex flex-col items-center max-w-6xl mt-40" role="contentinfo">
+                    <div class="text-5xl italic font-headline text-white mb-8">36 Studios</div>
+                    <div class="text-white/20 text-[10px] uppercase tracking-[0.3em]">
+                        © 2026 36 STUDIOS. ALL RIGHTS RESERVED. CRAFTED IN THE VOID.
+                    </div>
+                </footer>
+            </div>
+        </section>
+    </main>
+
+    <div id="inquireModal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-xl opacity-0 pointer-events-none transition-all duration-500" role="dialog" aria-modal="true" aria-hidden="true">
+        <div id="inquireModalContent" class="liquid-glass-strong p-12 rounded-3xl max-w-md w-[90%] border border-white/20 relative transform scale-95 transition-transform duration-500 shadow-2xl">
+            <button id="closeModal" class="absolute top-6 right-6 text-white/50 hover:text-white transition-colors hover-target bg-white/5 rounded-full p-2">
+                <span class="material-symbols-outlined block">close</span>
+            </button>
+            <h3 class="font-headline italic text-6xl mb-4 text-white">Let's Talk</h3>
+            <p class="text-white/60 text-sm mb-10 leading-relaxed font-body">Choose how you'd like to initiate the curation. We aim to respond within 2 hours.</p>
+            <div class="flex flex-col gap-4">
+                <a href="mailto:36studios.web@gmail.com" class="bg-white text-black py-4 rounded-xl text-center font-bold text-xs tracking-[0.2em] uppercase hover:scale-[1.02] transition-transform duration-300 hover-target shadow-lg">
+                    Email Us
+                </a>
+                <a href="https://wa.me/7796288980?text=Hey,%20I%20saw%20your%20website%20and%20want%20to%20discuss%20a%20project.%20When%20are%20you%20available%20to%20chat?" target="_blank" class="liquid-glass text-white py-4 rounded-xl text-center font-bold text-xs tracking-[0.2em] uppercase hover:bg-white/10 transition-colors duration-300 border border-white/20 hover-target">
+                    WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Setup Smooth Momentum Scroll via Lenis
+            const lenis = new Lenis({ duration: 1.4, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true, lerp: 0.08 });
+            function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+            requestAnimationFrame(raf);
+            lenis.on('scroll', ScrollTrigger.update);
+            gsap.ticker.add((time) => { lenis.raf(time * 1000) });
+
+            // Accelerated Custom Cursor Configuration
+            const cursorDot = document.querySelector('.cursor-dot');
+            const cursorOutline = document.querySelector('.cursor-outline');
+            const hoverTargets = document.querySelectorAll('.hover-target, a, button');
+
+            if (cursorDot && cursorOutline && window.matchMedia("(pointer: fine)").matches) {
+                gsap.set([cursorDot, cursorOutline], { xPercent: -50, yPercent: -50 });
+                const xToDot = gsap.quickTo(cursorDot, "x", { duration: 0.1, ease: "power3" });
+                const yToDot = gsap.quickTo(cursorDot, "y", { duration: 0.1, ease: "power3" });
+                const xToOutline = gsap.quickTo(cursorOutline, "x", { duration: 0.5, ease: "power3.out" });
+                const yToOutline = gsap.quickTo(cursorOutline, "y", { duration: 0.5, ease: "power3.out" });
+
+                window.addEventListener("mousemove", e => {
+                    xToDot(e.clientX); yToDot(e.clientY);
+                    xToOutline(e.clientX); yToOutline(e.clientY);
+                });
+
+                hoverTargets.forEach(target => {
+                    target.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+                    target.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+                });
+            }
+
+            // Scroll Element Fades
+            gsap.registerPlugin(ScrollTrigger);
+            gsap.utils.toArray('.animate-on-scroll').forEach((el) => {
+                gsap.to(el, { scrollTrigger: { trigger: el, start: "top 88%" }, opacity: 1, y: 0, duration: 1.2, ease: "power3.out", force3D: true });
+            });
+
+            // Dialog Window Mechanisms
+            const modal = document.getElementById('inquireModal');
+            const modalContent = document.getElementById('inquireModalContent');
+            const closeBtn = document.getElementById('closeModal');
+            const inquireTriggers = document.querySelectorAll('.inquire-trigger');
+
+            function openModal() { modal.classList.remove('opacity-0', 'pointer-events-none'); modalContent.classList.remove('scale-95'); modalContent.classList.add('scale-100'); lenis.stop(); }
+            function closeModal() { modal.classList.add('opacity-0', 'pointer-events-none'); modalContent.classList.remove('scale-100'); modalContent.classList.add('scale-95'); lenis.start(); }
+            inquireTriggers.forEach(btn => btn.addEventListener('click', (e) => { e.preventDefault(); openModal(); }));
+            closeBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+        });
+    </script>
+</body>
+</html>

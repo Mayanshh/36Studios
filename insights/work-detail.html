@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    
+    <title>Aethelgard Case Study | 36 Studios</title>
+    <meta name="description" content="A deep dive into the brand metamorphosis and cinematic engineering behind Aethelgard's digital platform. Built by 36 Studios.">
+    <meta name="robots" content="index, follow">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Barlow:wght@300;400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ffffff",
+                        "surface-container-high": "#2a2a2a",
+                    },
+                    fontFamily: {
+                        "headline": ["'Instrument Serif'", "serif"],
+                        "body": ["'Barlow'", "sans-serif"],
+                    }
+                },
+            },
+        }
+    </script>
+
+    <style>
+        @layer utilities {
+            .liquid-glass {
+                background: rgba(255, 255, 255, 0.02);
+                backdrop-filter: blur(16px);
+                -webkit-backdrop-filter: blur(16px);
+            }
+            .liquid-glass-strong {
+                background: rgba(255, 255, 255, 0.05);
+                backdrop-filter: blur(40px);
+                -webkit-backdrop-filter: blur(40px);
+            }
+            .material-symbols-outlined {
+                font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            }
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Barlow', sans-serif;
+            overflow-x: hidden;
+            overscroll-behavior-y: none; 
+        }
+
+        @media (pointer: fine) {
+            body, a, button, input, textarea {
+                cursor: none !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        * {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .noise {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 9999;
+            background: url('data:image/svg+xml;utf8,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E');
+            opacity: 0.04;
+        }
+
+        .cursor-dot, .cursor-outline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: translate3d(-50%, -50%, 0);
+            pointer-events: none;
+            z-index: 10000;
+            will-change: transform, width, height;
+            border-radius: 50%;
+        }
+
+        .cursor-dot {
+            width: 6px;
+            height: 6px;
+            background-color: white;
+            transition: width 0.2s cubic-bezier(0.16, 1, 0.3, 1), height 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .cursor-outline {
+            width: 30px;
+            height: 30px;
+            border: 1px solid rgba(255,255,255,0.4);
+            z-index: 9999;
+            transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s, background-color 0.3s, backdrop-filter 0.3s;
+        }
+
+        .cursor-hover .cursor-dot {
+            width: 0px;
+            height: 0px;
+        }
+        .cursor-hover .cursor-outline {
+            width: 55px;
+            height: 55px;
+            background-color: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.8);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translate3d(0, 40px, 0);
+            will-change: transform, opacity;
+        }
+
+        .parallax-media {
+            will-change: transform;
+            transform-origin: center center;
+        }
+    </style>
+</head>
+<body class="selection:bg-white selection:text-black bg-black text-white antialiased">
+
+    <div class="noise"></div>
+    <div class="cursor-dot hidden md:block"></div>
+    <div class="cursor-outline hidden md:block"></div>
+
+    <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between max-w-6xl px-8 rounded-full mt-6 mx-auto w-[95%] lg:w-[45%] py-4 bg-white/5 dark:bg-black/20 backdrop-blur-2xl border border-white/10 shadow-[0_20px_80px_rgba(0,0,0,0.8)] transition-all duration-500 will-change-transform" id="navbar" role="navigation">
+        <a href="index.html" class="font-headline italic text-3xl tracking-tighter text-white mr-12 hover-target">36 Studios</a>
+        <div class="hidden md:flex items-center gap-10 mr-12">
+            <a class="text-white/60 font-medium text-sm tracking-wide hover:text-white transition-colors duration-300 hover-target" href="index.html">Back to Home</a>
+        </div>
+        <button class="inquire-trigger bg-white text-black font-semibold text-[11px] uppercase tracking-[0.2em] px-8 py-3 rounded-full hover:scale-105 transition-transform duration-500 hover-target shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+            Inquire
+        </button>
+    </nav>
+
+    <main role="main">
+        <section class="relative h-[85vh] bg-black w-full flex flex-col items-center justify-center overflow-hidden pt-20">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black z-10"></div>
+            <video autoplay loop muted playsinline preload="auto" class="absolute top-0 left-0 w-full h-full object-cover opacity-40 scale-105 hero-video">
+                <source src="https://res.cloudinary.com/ddoqejzwg/video/upload/v1775231560/work2_jrbeas.mp4" type="video/mp4"/>
+            </video>
+            
+            <div class="relative z-20 text-center container mx-auto px-6 flex flex-col items-center mt-20">
+                <span class="text-white/40 uppercase tracking-[0.3em] text-xs font-bold mb-4 hero-subtext">Case Study — Architecture & Form</span>
+                <h1 class="font-headline italic text-6xl md:text-[8rem] mb-6 max-w-5xl leading-[0.9] tracking-tighter text-white hero-text drop-shadow-2xl">
+                    Aethelgard: Physical Mastery Meets Digital Artistry
+                </h1>
+            </div>
+        </section>
+
+        <section class="py-16 border-b border-white/10 bg-black relative z-20">
+            <div class="container mx-auto px-6 max-w-6xl grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-white/40 text-[10px] uppercase tracking-[0.2em] font-bold mb-2">Client</div>
+                    <div class="text-lg font-light">Aethelgard Luxury Group</div>
+                </div>
+                <div>
+                    <div class="text-white/40 text-[10px] uppercase tracking-[0.2em] font-bold mb-2">Services Provided</div>
+                    <div class="text-lg font-light">Brand Strategy, WebGL Engine, UX Architecture</div>
+                </div>
+                <div>
+                    <div class="text-white/40 text-[10px] uppercase tracking-[0.2em] font-bold mb-2">Timeline</div>
+                    <div class="text-lg font-light">3 Weeks (Pipeline Archetype B)</div>
+                </div>
+                <div>
+                    <div class="text-white/40 text-[10px] uppercase tracking-[0.2em] font-bold mb-2">Key Metric Result</div>
+                    <div class="text-lg font-headline italic text-white font-bold">6.1x Organic Conversion Lift</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-32 bg-black relative">
+            <div class="container mx-auto px-6 max-w-6xl grid md:grid-cols-2 gap-20">
+                <div class="animate-on-scroll">
+                    <span class="text-white/40 uppercase tracking-[0.3em] text-xs font-bold mb-6 block">The Objective</span>
+                    <h2 class="font-headline italic text-4xl md:text-5xl mb-6 leading-tight">Translating absolute physical perfection into an ethereal digital environment.</h2>
+                    <p class="text-white/60 font-body text-base font-light leading-relaxed">
+                        Aethelgard builds flawless structural marvels. Yet, their online architecture resembled standard corporate platforms. They came to 36 Studios demanding an online existence that commanded the exact same awe and expensive presence as stepping inside their physical spaces.
+                    </p>
+                </div>
+                <div class="animate-on-scroll" style="transition-delay: 150ms;">
+                    <span class="text-white/40 uppercase tracking-[0.3em] text-xs font-bold mb-6 block">The Strategy</span>
+                    <h2 class="font-headline italic text-4xl md:text-5xl mb-6 leading-tight">Choreographing layout variables around human visual weight mechanics.</h2>
+                    <p class="text-white/60 font-body text-base font-light leading-relaxed">
+                        We abandoned generic templates and designed a heavy, intentional scrolling environment leveraging lightweight custom WebGL shaders. Every layout variable responds gracefully to desktop interactions, generating micro-delights that guide highly discerning clients precisely into their exclusive curation funnels.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 bg-black">
+            <div class="container mx-auto px-6 max-w-7xl">
+                <div class="rounded-3xl overflow-hidden liquid-glass-strong p-2 animate-on-scroll parallax-container aspect-video">
+                    <video autoplay loop muted playsinline class="w-full h-full object-cover rounded-2xl parallax-media scale-[1.12]">
+                        <source src="https://res.cloudinary.com/ddoqejzwg/video/upload/v1775231560/work1_gmwarv.mp4" type="video/mp4"/>
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-32 bg-black">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <header class="mb-20 animate-on-scroll">
+                    <span class="text-white/40 uppercase tracking-[0.3em] text-xs font-bold mb-6 block">The Execution</span>
+                    <h2 class="font-headline italic text-5xl md:text-7xl">Anatomy of the Curation</h2>
+                </header>
+                
+                <div class="space-y-12">
+                    <div class="grid md:grid-cols-3 gap-8 pb-12 border-b border-white/10 animate-on-scroll">
+                        <div class="text-white/30 font-headline italic text-4xl">01 / Cinematic Motion</div>
+                        <div class="md:col-span-2">
+                            <h3 class="text-2xl font-body font-semibold mb-3">GSAP Orchestration</h3>
+                            <p class="text-white/50 text-sm leading-relaxed font-light">Every image reveal uses dynamic layout calculations. By offloading complex animations directly to GPU render layers, transitions remain crystal clear at a fixed 120 frames per second on high-end displays.</p>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-8 pb-12 border-b border-white/10 animate-on-scroll">
+                        <div class="text-white/30 font-headline italic text-4xl">02 / Edge Distribution</div>
+                        <div class="md:col-span-2">
+                            <h3 class="text-2xl font-body font-semibold mb-3">Zero Friction Deployment</h3>
+                            <p class="text-white/50 text-sm leading-relaxed font-light">Instead of complex server management frameworks, the final build was compiled using standard edge nodes on AWS. This architecture maps asset delivery speeds under 1.4s globally, completely eliminating standard performance friction.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative py-48 bg-black overflow-hidden flex flex-col items-center text-center border-t border-white/10">
+            <div class="relative z-20 container mx-auto px-6 flex flex-col items-center">
+                <h2 class="font-headline italic text-6xl md:text-9xl mb-12 tracking-tighter text-white drop-shadow-2xl">Ready for your<br/>metamorphosis?</h2>
+                <button class="inquire-trigger bg-white text-black px-16 py-6 rounded-full text-sm font-bold uppercase tracking-[0.2em] hover:scale-110 transition-transform duration-500 shadow-[0_0_40px_rgba(255,255,255,0.3)] hover-target">
+                    Initiate Discussion
+                </button>
+                
+                <footer class="w-full border-t border-white/10 pt-12 flex flex-col items-center max-w-6xl mt-32" role="contentinfo">
+                    <div class="text-5xl italic font-headline text-white mb-8">36 Studios</div>
+                    <div class="text-white/20 text-[10px] uppercase tracking-[0.3em]">
+                        © 2026 36 STUDIOS. ALL RIGHTS RESERVED. CRAFTED IN THE VOID.
+                    </div>
+                </footer>
+            </div>
+        </section>
+    </main>
+
+    <div id="inquireModal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-xl opacity-0 pointer-events-none transition-all duration-500" role="dialog" aria-modal="true" aria-hidden="true">
+        <div id="inquireModalContent" class="liquid-glass-strong p-12 rounded-3xl max-w-md w-[90%] border border-white/20 relative transform scale-95 transition-transform duration-500 shadow-2xl">
+            <button id="closeModal" class="absolute top-6 right-6 text-white/50 hover:text-white transition-colors hover-target bg-white/5 rounded-full p-2">
+                <span class="material-symbols-outlined block">close</span>
+            </button>
+            <h3 class="font-headline italic text-6xl mb-4 text-white">Let's Talk</h3>
+            <p class="text-white/60 text-sm mb-10 leading-relaxed font-body">Choose how you'd like to initiate the curation. We aim to respond within 2 hours.</p>
+            <div class="flex flex-col gap-4">
+                <a href="mailto:36studios.web@gmail.com" class="bg-white text-black py-4 rounded-xl text-center font-bold text-xs tracking-[0.2em] uppercase hover:scale-[1.02] transition-transform duration-300 hover-target shadow-lg">
+                    Email Us
+                </a>
+                <a href="https://wa.me/7796288980?text=Hey,%20I%20saw%20your%20website%20and%20want%20to%20discuss%20a%20project.%20When%20are%20you%20available%20to%20chat?" target="_blank" class="liquid-glass text-white py-4 rounded-xl text-center font-bold text-xs tracking-[0.2em] uppercase hover:bg-white/10 transition-colors duration-300 border border-white/20 hover-target">
+                    WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth Scroll
+            const lenis = new Lenis({ duration: 1.4, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true, lerp: 0.08 });
+            function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+            requestAnimationFrame(raf);
+            lenis.on('scroll', ScrollTrigger.update);
+            gsap.ticker.add((time) => { lenis.raf(time * 1000) });
+
+            // Custom Cursor Customization 
+            const cursorDot = document.querySelector('.cursor-dot');
+            const cursorOutline = document.querySelector('.cursor-outline');
+            const hoverTargets = document.querySelectorAll('.hover-target, a, button');
+
+            if (cursorDot && cursorOutline && window.matchMedia("(pointer: fine)").matches) {
+                gsap.set([cursorDot, cursorOutline], { xPercent: -50, yPercent: -50 });
+                const xToDot = gsap.quickTo(cursorDot, "x", { duration: 0.1, ease: "power3" });
+                const yToDot = gsap.quickTo(cursorDot, "y", { duration: 0.1, ease: "power3" });
+                const xToOutline = gsap.quickTo(cursorOutline, "x", { duration: 0.5, ease: "power3.out" });
+                const yToOutline = gsap.quickTo(cursorOutline, "y", { duration: 0.5, ease: "power3.out" });
+
+                window.addEventListener("mousemove", e => {
+                    xToDot(e.clientX); yToDot(e.clientY);
+                    xToOutline(e.clientX); yToOutline(e.clientY);
+                });
+
+                hoverTargets.forEach(target => {
+                    target.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+                    target.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+                });
+            }
+
+            // Initialization Timelines
+            gsap.registerPlugin(ScrollTrigger);
+            gsap.fromTo(".hero-text", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 1.2, ease: "power3.out" });
+            gsap.fromTo(".hero-subtext", { opacity: 0 }, { opacity: 1, duration: 1, delay: 0.4 });
+
+            // Scroll Triggers
+            gsap.utils.toArray('.animate-on-scroll').forEach((el) => {
+                gsap.to(el, { scrollTrigger: { trigger: el, start: "top 85%" }, opacity: 1, y: 0, duration: 1, ease: "power3.out", force3D: true });
+            });
+
+            // Parallax Setup
+            gsap.utils.toArray('.parallax-container').forEach(container => {
+                const media = container.querySelector('.parallax-media');
+                gsap.to(media, { yPercent: 12, ease: "none", force3D: true, scrollTrigger: { trigger: container, start: "top bottom", end: "bottom top", scrub: true } });
+            });
+
+            // Modal Trigger Architectures
+            const modal = document.getElementById('inquireModal');
+            const modalContent = document.getElementById('inquireModalContent');
+            const closeBtn = document.getElementById('closeModal');
+            const inquireTriggers = document.querySelectorAll('.inquire-trigger');
+
+            function openModal() { modal.classList.remove('opacity-0', 'pointer-events-none'); modalContent.classList.remove('scale-95'); modalContent.classList.add('scale-100'); lenis.stop(); }
+            function closeModal() { modal.classList.add('opacity-0', 'pointer-events-none'); modalContent.classList.remove('scale-100'); modalContent.classList.add('scale-95'); lenis.start(); }
+            inquireTriggers.forEach(btn => btn.addEventListener('click', (e) => { e.preventDefault(); openModal(); }));
+            closeBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+        });
+    </script>
+</body>
+</html>

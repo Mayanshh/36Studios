@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Works — Creative Architecture</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+    
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Instrument Serif', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Premium Natural Warm White Visual System */
+        body {
+            background-color: #FAF9F5;
+            color: #111111;
+            overflow-x: hidden;
+        }
+
+        /* Prevent Layout Glitches Across Interactive Viewports */
+        img, video {
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+
+        /* Interactive Context Cursor Element */
+        .custom-cursor {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            background-color: #111111;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate3d(0, 0, 0) translate(-50%, -50%);
+            transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                        height 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                        background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                        border 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                        backdrop-filter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: transform, width, height;
+        }
+
+        /* Standardized Media Viewport Shell */
+        .project-media-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            background-color: #ECEAE4;
+            transform: translate3d(0,0,0);
+        }
+
+        /* Premium Cinematic Media Transitions */
+        .project-video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transform: scale(1.01);
+            filter: contrast(1.02) brightness(0.98);
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), 
+                        filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: transform, filter;
+        }
+
+        /* Fluid scale response on card engagement */
+        .project-card:hover .project-video {
+            transform: scale(1.05);
+            filter: contrast(1) brightness(1);
+        }
+
+        /* Micro-Interactive Inline Links */
+        .interactive-link {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+        }
+        .interactive-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #111111;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .interactive-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        /* Core Web Vitals Micro-Animation Processing Layer */
+        .stagger-reveal {
+            opacity: 0;
+            animation: textReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes textReveal {
+            from {
+                opacity: 0;
+                transform: translate3d(0, 30px, 0);
+            }
+            to {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-black selection:text-white">
+
+    <div class="custom-cursor hidden md:block" id="cursor"></div>
+
+    <nav class="w-full fixed top-0 left-0 px-8 py-6 mix-blend-difference z-50 flex justify-between items-center" role="navigation">
+        <a href="/" class="font-serif italic text-3xl tracking-tighter text-[#FAF9F5] mix-blend-difference">36 Studios</a>
+        <div class="flex gap-12 items-center">
+            <a href="/" class="text-sm font-medium tracking-wide text-[#FAF9F5] mix-blend-difference hover:opacity-60 transition-opacity">Home</a>
+            <a href="#works" class="text-sm font-medium tracking-wide text-[#FAF9F5] mix-blend-difference hover:opacity-60 transition-opacity">Works</a>
+        </div>
+    </nav>
+
+    <main class="w-full min-h-screen px-6 md:px-16 lg:px-24 pt-44 pb-64" role="main">
+        
+        <header class="max-w-7xl mx-auto mb-32 md:mb-56">
+            <div class="overflow-hidden mb-4">
+                <span class="block text-xs uppercase tracking-[0.3em] text-neutral-400 font-medium stagger-reveal" style="animation-delay: 0.05s;">
+                    Master Catalogue
+                </span>
+            </div>
+            <h1 class="font-serif italic text-6xl md:text-[8.5rem] leading-[0.9] tracking-tighter max-w-5xl stagger-reveal" style="animation-delay: 0.15s;">
+                Engineering digital monuments with intentionality.
+            </h1>
+        </header>
+
+        <section class="max-w-7xl mx-auto space-y-48 md:space-y-64" id="works" aria-label="Project Showcases">
+            
+            <article class="project-card group relative grid grid-cols-12 gap-6 items-start" role="article">
+                <div class="col-span-12 lg:col-span-8 aspect-[16/10]">
+                    <a href="#" class="cursor-expand block w-full h-full overflow-hidden rounded-xl">
+                        <div class="project-media-container">
+                            <video class="project-video object-cover" autoplay loop muted playsinline>
+                                <source src="https://res.cloudinary.com/djd1tenw9/video/upload/v1780309360/futurescape-vid_ongdts.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-span-12 lg:col-span-4 lg:pt-6 flex flex-col justify-between h-full">
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-[10px] font-mono tracking-widest uppercase border border-neutral-300 px-3 py-1 rounded-full text-neutral-600">AI Architecture</span>
+                            <span class="text-[10px] font-mono tracking-widest uppercase border border-neutral-300 px-3 py-1 rounded-full text-neutral-600">Next.js</span>
+                        </div>
+                        <h2 class="font-serif italic text-4xl md:text-5xl tracking-tight mb-4 text-neutral-900 group-hover:text-neutral-600 transition-colors duration-300">
+                            Futurescape
+                        </h2>
+                        <p class="text-neutral-500 font-sans text-sm font-light leading-relaxed max-w-sm mb-4">
+                            Driven by algorithmic innovation, we empower creators, technologists, visionaries, and global brands in the ideation, generation, and physical materialization of AI-driven media, cinematic environments, digital artifacts, and future-ready prototypes.
+                        </p>
+                        <p class="text-neutral-500 font-sans text-sm font-light leading-relaxed max-w-sm mb-8">
+                            Built on a foundation of digital innovation, we bridge algorithmic precision and human emotion. From Prompts To Presence.
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#" class="interactive-link gap-2 text-xs font-medium uppercase tracking-[0.15em] text-neutral-800">
+                            Explore Concept <span class="transform group-hover:translate-x-1 transition-transform duration-300 ml-1">→</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card group relative grid grid-cols-12 gap-6 items-start" role="article">
+                <div class="col-span-12 lg:col-span-4 lg:col-start-2 lg:pt-6 order-2 lg:order-1 flex flex-col justify-between h-full">
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-[10px] font-mono tracking-widest uppercase border border-neutral-300 px-3 py-1 rounded-full text-neutral-600">Luxury E-Commerce</span>
+                            <span class="text-[10px] font-mono tracking-widest uppercase border border-neutral-300 px-3 py-1 rounded-full text-neutral-600">WebGL</span>
+                        </div>
+                        <h2 class="font-serif italic text-4xl md:text-5xl tracking-tight mb-4 text-neutral-900 group-hover:text-neutral-600 transition-colors duration-300">
+                            Veloura
+                        </h2>
+                        <p class="text-neutral-500 font-sans text-sm font-light leading-relaxed max-w-sm mb-8">
+                            A premium luxury jewellery brand interface. Engineered with spatial symmetry, minimal luxury UI, and an autonomous checkout pipeline designed specifically to capture and convert high-ticket clientele seamlessly.
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#" class="interactive-link gap-2 text-xs font-medium uppercase tracking-[0.15em] text-neutral-800">
+                            View Storefront <span class="transform group-hover:translate-x-1 transition-transform duration-300 ml-1">→</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-span-12 lg:col-span-7 lg:col-start-6 order-1 lg:order-2 aspect-[16/10]">
+                    <a href="#" class="cursor-expand block w-full h-full overflow-hidden rounded-xl">
+                        <div class="project-media-container">
+                            <video class="project-video object-cover" autoplay loop muted playsinline>
+                                <source src="https://res.cloudinary.com/djd1tenw9/video/upload/v1780309375/veloura-vid_wn803y.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </a>
+                </div>
+            </article>
+
+            <article class="project-card group relative grid grid-cols-12 gap-6 items-start" role="article">
+                <div class="col-span-12 lg:col-span-10 lg:col-start-2 aspect-[21/9]">
+                    <a href="#" class="cursor-expand block w-full h-full overflow-hidden rounded-xl">
+                        <div class="project-media-container">
+                            <video class="project-video object-cover" autoplay loop muted playsinline>
+                                <source src="https://res.cloudinary.com/djd1tenw9/video/upload/v1780309381/tflClub-vid_rp7tz3.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-span-12 lg:col-span-8 lg:col-start-2 pt-6 flex flex-col md:flex-row md:items-center justify-between gap-6">
+                    <div>
+                        <div class="flex gap-3 mb-2">
+                            <span class="text-[10px] font-mono tracking-widest uppercase text-neutral-400">FinTech</span>
+                            <span class="text-[10px] font-mono tracking-widest uppercase text-neutral-400">•</span>
+                            <span class="text-[10px] font-mono tracking-widest uppercase text-neutral-400">Systems Engineering</span>
+                        </div>
+                        <h2 class="font-serif italic text-4xl tracking-tight text-neutral-900 group-hover:text-neutral-600 transition-colors duration-300">TFL Club</h2>
+                    </div>
+                    <p class="text-neutral-500 font-sans text-sm font-light max-w-md leading-relaxed">
+                        A premium, invite-only trading club platform. Constructed with strict access-control architectures, real-time financial data streaming, and absolute visual restraint.
+                    </p>
+                </div>
+            </article>
+
+            <article class="project-card group relative grid grid-cols-12 gap-6 items-start" role="article">
+                <div class="col-span-12 lg:col-span-8 aspect-[16/10]">
+                    <a href="#" class="cursor-expand block w-full h-full overflow-hidden rounded-xl">
+                        <div class="project-media-container">
+                            <video class="project-video object-cover" autoplay loop muted playsinline>
+                                <source src="https://res.cloudinary.com/djd1tenw9/video/upload/v1780309363/codehubindia-vid_idxacq.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-span-12 lg:col-span-4 lg:pt-6 flex flex-col justify-between h-full">
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-[10px] font-mono tracking-widest uppercase border border-neutral-300 px-3 py-1 rounded-full text-neutral-600">EdTech</span>
+                            <span class="text-[10px] font-mono tracking-widest uppercase border border-neutral-300 px-3 py-1 rounded-full text-neutral-600">Learning Architecture</span>
+                        </div>
+                        <h2 class="font-serif italic text-4xl md:text-5xl tracking-tight mb-4 text-neutral-900 group-hover:text-neutral-600 transition-colors duration-300">
+                            Codehub India
+                        </h2>
+                        <p class="text-neutral-500 font-sans text-sm font-light leading-relaxed max-w-sm mb-8">
+                            An elite teaching institution platform engineered to handle high-frequency concurrent traffic while delivering a zero-latency, distraction-free educational experience for modern developers.
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#" class="interactive-link gap-2 text-xs font-medium uppercase tracking-[0.15em] text-neutral-800">
+                            View Platform <span class="transform group-hover:translate-x-1 transition-transform duration-300 ml-1">→</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card group relative grid grid-cols-12 gap-6 items-start" role="article">
+                <div class="col-span-12 lg:col-span-4 lg:col-start-2 lg:pt-6 order-2 lg:order-1 flex flex-col justify-between h-full">
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-[10px] font-mono tracking-widest uppercase border border-neutral-300 px-3 py-1 rounded-full text-neutral-600">Digital Identity</span>
+                            <span class="text-[10px] font-mono tracking-widest uppercase border border-neutral-300 px-3 py-1 rounded-full text-neutral-600">TypeScript / Fastify</span>
+                        </div>
+                        <h2 class="font-serif italic text-4xl md:text-5xl tracking-tight mb-4 text-neutral-900 group-hover:text-neutral-600 transition-colors duration-300">
+                            Digital Architecture
+                        </h2>
+                        <p class="text-neutral-500 font-sans text-sm font-light leading-relaxed max-w-sm mb-8">
+                            The personal digital footprint of Mayansh Bangali. A manifestation of creative subtraction, high-performance full-stack systems engineering, and cinematic kinetic interfaces.
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#" class="interactive-link gap-2 text-xs font-medium uppercase tracking-[0.15em] text-neutral-800">
+                            Explore Repository <span class="transform group-hover:translate-x-1 transition-transform duration-300 ml-1">→</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-span-12 lg:col-span-7 lg:col-start-6 order-1 lg:order-2 aspect-[16/10]">
+                    <a href="#" class="cursor-expand block w-full h-full overflow-hidden rounded-xl">
+                        <div class="project-media-container">
+                            <video class="project-video object-cover" autoplay loop muted playsinline>
+                                <source src="https://res.cloudinary.com/djd1tenw9/video/upload/v1780309388/portfolio-vid_o31zlo.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </a>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script>
+        // 1. Initialize Lenis Smooth Scroll Engine
+        const lenis = new Lenis({
+            duration: 1.1,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            smoothWheel: true,
+            wheelMultiplier: 1,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // 2. Inertial Cursor Tracking Vector Loop
+        const cursor = document.getElementById('cursor');
+        let mouseX = 0, mouseY = 0;
+        let cursorX = 0, cursorY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        function renderCursor() {
+            const lerpFactor = 0.15; 
+            cursorX += (mouseX - cursorX) * lerpFactor;
+            cursorY += (mouseY - cursorY) * lerpFactor;
+            
+            cursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0) translate(-50%, -50%)`;
+            requestAnimationFrame(renderCursor);
+        }
+        requestAnimationFrame(renderCursor);
+
+        // 3. Clean Micro-Interactive Context Filters
+        const standardLinks = document.querySelectorAll('a, nav text, button');
+        const mediaTargets = document.querySelectorAll('.cursor-expand');
+
+        standardLinks.forEach(link => {
+            if (link.classList.contains('cursor-expand')) return;
+
+            link.addEventListener('mouseenter', () => {
+                cursor.style.width = '28px';
+                cursor.style.height = '28px';
+                cursor.style.backgroundColor = 'rgba(17, 17, 17, 0.06)';
+                cursor.style.border = '1px solid rgba(17, 17, 17, 0.12)';
+            });
+
+            link.addEventListener('mouseleave', () => {
+                cursor.style.width = '10px';
+                cursor.style.height = '10px';
+                cursor.style.backgroundColor = '#111111';
+                cursor.style.border = 'none';
+            });
+        });
+
+        mediaTargets.forEach(target => {
+            target.addEventListener('mouseenter', () => {
+                cursor.style.width = '72px';
+                cursor.style.height = '72px';
+                cursor.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+                cursor.style.backdropFilter = 'blur(8px) invert(1)';
+                cursor.style.border = '1px solid rgba(255, 255, 255, 0.3)';
+            });
+
+            target.addEventListener('mouseleave', () => {
+                cursor.style.width = '10px';
+                cursor.style.height = '10px';
+                cursor.style.backgroundColor = '#111111';
+                cursor.style.backdropFilter = 'none';
+                cursor.style.border = 'none';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -7,25 +7,56 @@
     <title>Custom Web Development & Design Agency in Nashik | 36 Studios</title>
     <meta name="description" content="Elite web development, premium brand redesign, and autonomous business automation systems in Nashik. We build high-performance, minimal digital architecture.">
     <meta name="keywords" content="web dev agency in nashik, web designer nashik, website redesign services nashik, custom software development nashik, 36 studios">
-    <link rel="canonical" href="https://36studios.in/locations/web-development-nashik.html" />
+    <link class="canonical" href="https://36studios.in/locations/web-development-nashik.html" />
 
-    <link rel="stylesheet" href="../css/output.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Barlow', 'sans-serif'],
+                        body: ['Barlow', 'sans-serif'],
+                        headline: ['Instrument Serif', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Barlow:wght@300;400;500;600&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
 
     <style>
         body { background-color: #000000; color: #ffffff; overflow-x: hidden; overscroll-behavior-y: none; }
-        @media (pointer: fine) { body, a, button { cursor: none !important; } }
+        
+        /* Optimized Cursor Rules (Targets body fine-pointer only to prevent crash/collision) */
+        @media (pointer: fine) { 
+            body { cursor: none !important; } 
+            .hover-target, a, button { cursor: none !important; }
+        }
+        
         ::-webkit-scrollbar { display: none; }
         * { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* Kinetic Background Noise Overlay */
         .noise { position: fixed; inset: 0; pointer-events: none; z-index: 9999; background: url('data:image/svg+xml;utf8,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E'); opacity: 0.04; }
+        
+        /* Luxury Inertial Follow Cursor Core Styling */
         .cursor-dot, .cursor-outline { position: fixed; top: 0; left: 0; transform: translate3d(-50%, -50%, 0); pointer-events: none; z-index: 10000; will-change: transform; border-radius: 50%; }
         .cursor-dot { width: 6px; height: 6px; background-color: white; }
-        .cursor-outline { width: 30px; height: 30px; border: 1px solid rgba(255, 255, 255, 0.4); transition: width 0.3s, height 0.3s, background-color 0.3s; }
-        .cursor-hover .cursor-outline { width: 55px; height: 55px; background-color: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.8); backdrop-filter: blur(4px); }
-        .cursor-hover .cursor-dot { width: 0px; height: 0px; }
+        .cursor-outline { width: 30px; height: 30px; border: 1px solid rgba(255, 255, 255, 0.4); transition: width 0.3s, height 0.3s, background-color 0.3s, border-color 0.3s; }
+        
+        /* Dynamic Class States Triggered by GSAP Matrix Listeners */
+        body.cursor-hover .cursor-outline { width: 55px; height: 55px; background-color: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.9); backdrop-filter: blur(4px); }
+        body.cursor-hover .cursor-dot { width: 0px; height: 0px; }
+
+        /* Structural Design Fallback Layers */
+        .font-body { font-family: 'Barlow', sans-serif !important; }
+        .font-headline { font-family: 'Instrument Serif', serif !important; }
     </style>
 
     <script type="application/ld+json">
@@ -58,14 +89,15 @@
     }
     </script>
 </head>
-<body class="antialiased">
+<body class="antialiased selection:bg-white selection:text-black">
+    
     <div class="noise"></div>
     <div class="cursor-dot hidden md:block"></div>
     <div class="cursor-outline hidden md:block"></div>
 
     <nav class="w-full max-w-5xl mx-auto px-6 py-8 flex justify-between items-center border-b border-white/5 font-body">
-        <a href="../index.html" class="font-headline italic text-2xl tracking-tight hover-target">36 Studios</a>
-        <a href="mailto:36studios.web@gmail.com" class="text-xs uppercase tracking-widest bg-white text-black px-6 py-2.5 rounded-full font-semibold hover-target">Inquire</a>
+        <a href="../index.html" class="font-headline italic text-2xl tracking-tight hover-target transition-opacity hover:opacity-70">36 Studios</a>
+        <a href="mailto:36studios.web@gmail.com" class="text-xs uppercase tracking-widest bg-white text-black px-6 py-2.5 rounded-full font-semibold hover-target transition-transform active:scale-95">Inquire</a>
     </nav>
 
     <main class="min-h-screen px-6 py-24 md:px-24">
@@ -74,7 +106,7 @@
             <header class="border-b border-white/10 pb-8">
                 <p class="text-xs uppercase tracking-[0.3em] text-white/40 mb-3 font-body font-semibold">[ SYSTEM LOCATION MATRIX ]</p>
                 <h1 class="text-5xl md:text-7xl font-light tracking-tight text-white font-headline italic leading-none">
-                    Custom Web Development & Design Agency in Nashik
+                    Custom Web Development &amp; Design Agency in Nashik
                 </h1>
             </header>
 
@@ -86,21 +118,24 @@
             </section>
 
             <section class="space-y-6">
-                <h2 class="text-xs tracking-[0.2em] text-white/40 font-bold uppercase font-body">[ 02 / EXPERT SERVICES & SYSTEMS ]</h2>
+                <h2 class="text-xs tracking-[0.2em] text-white/40 font-bold uppercase font-body">[ 02 / EXPERT SERVICES &amp; SYSTEMS ]</h2>
                 <div class="grid md:grid-cols-3 gap-6 font-body">
-                    <div class="border border-white/5 p-8 bg-white/[0.02] backdrop-blur-xl rounded-2xl">
+                    
+                    <div class="border border-white/5 p-8 bg-white/[0.02] backdrop-blur-xl rounded-2xl hover:border-white/20 transition-colors duration-300">
                         <h3 class="text-white font-headline italic text-2xl mb-3">Web Systems Engineering</h3>
                         <p class="text-xs text-white/50 leading-relaxed font-light">
                             Bespoke interfaces orchestrated with performance optimization patterns, paired with high-velocity backends for lightning fast page loading speeds.
                         </p>
                     </div>
-                    <div class="border border-white/5 p-8 bg-white/[0.02] backdrop-blur-xl rounded-2xl">
+                    
+                    <div class="border border-white/5 p-8 bg-white/[0.02] backdrop-blur-xl rounded-2xl hover:border-white/20 transition-colors duration-300">
                         <h3 class="text-white font-headline italic text-2xl mb-3">Brand Architecture</h3>
                         <p class="text-xs text-white/50 leading-relaxed font-light">
                             Premium brand redesign for established enterprises. We overhaul legacy visual clutter into structured typography scales and corporate identities.
                         </p>
                     </div>
-                    <div class="border border-white/5 p-8 bg-white/[0.02] backdrop-blur-xl rounded-2xl">
+                    
+                    <div class="border border-white/5 p-8 bg-white/[0.02] backdrop-blur-xl rounded-2xl hover:border-white/20 transition-colors duration-300">
                         <h3 class="text-white font-headline italic text-2xl mb-3">Autonomous Pipelines</h3>
                         <p class="text-xs text-white/50 leading-relaxed font-light">
                             End-to-end backend automation pipelines that capture, process, and synchronize tracking metrics directly to your structural infrastructure.
@@ -118,9 +153,9 @@
 
             <section class="space-y-4 pt-6 border-t border-white/10">
                 <h2 class="text-xs uppercase tracking-[0.3em] text-white/40 font-body font-semibold">[ GEOGRAPHIC LATITUDE ANCHOR ]</h2>
-                <div class="w-full h-72 border border-white/10 grayscale filter invert opacity-30 contrast-125 rounded-2xl overflow-hidden">
+                <div class="w-full h-72 border border-white/10 grayscale filter invert opacity-20 contrast-125 rounded-2xl overflow-hidden hover:opacity-40 transition-opacity duration-500">
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119981.39679163234!2d73.72107776410499!3d19.997453299718423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddee014e26de31%3A0xc86b017a14e47e8f!2sNashik%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin" 
+                        src="https://maps.google.com/maps?q=Nashik&t=&z=13&ie=UTF8&iwloc=&output=embed" 
                         width="100%" 
                         height="100%" 
                         style="border: 0;" 
@@ -134,24 +169,37 @@
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            const lenis = new Lenis({ duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true });
-            function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+            // Smooth Scrolling Initialization Protocols
+            const lenis = new Lenis({ 
+                duration: 1.2, 
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
+                smoothWheel: true 
+            });
+            function raf(time) { 
+                lenis.raf(time); 
+                requestAnimationFrame(raf); 
+            }
             requestAnimationFrame(raf);
 
+            // Follower Dot Custom Control Logic
             const dot = document.querySelector(".cursor-dot");
             const outline = document.querySelector(".cursor-outline");
+            
             if(dot && outline && window.matchMedia("(pointer: fine)").matches) {
                 gsap.set([dot, outline], { xPercent: -50, yPercent: -50 });
+                
                 window.addEventListener("mousemove", (e) => {
-                    gsap.to(dot, { x: e.clientX, y: e.clientY, duration: 0.1 });
-                    gsap.to(outline, { x: e.clientX, y: e.clientY, duration: 0.4 });
+                    gsap.to(dot, { x: e.clientX, y: e.clientY, duration: 0.1, overwrite: "auto" });
+                    gsap.to(outline, { x: e.clientX, y: e.clientY, duration: 0.35, overwrite: "auto" });
                 });
-                document.querySelectorAll(".hover-target, a, button").forEach(t => {
-                    t.addEventListener("mouseenter", () => document.body.classList.add("cursor-hover"));
-                    t.addEventListener("mouseleave", () => document.body.classList.remove("cursor-hover"));
+                
+                // Track mouse events globally for hover transformations
+                document.querySelectorAll(".hover-target, a, button, [role='button']").forEach(elem => {
+                    elem.addEventListener("mouseenter", () => document.body.classList.add("cursor-hover"));
+                    elem.addEventListener("mouseleave", () => document.body.classList.remove("cursor-hover"));
                 });
             }
         });

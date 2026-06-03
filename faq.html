@@ -85,13 +85,33 @@
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Instrument Serif', 'serif'] } } } }
+        tailwind.config = { 
+            theme: { 
+                extend: { 
+                    fontFamily: { 
+                        sans: ['Inter', 'sans-serif'], 
+                        serif: ['Instrument Serif', 'serif'] 
+                    } 
+                } 
+            } 
+        }
     </script>
 
     <style>
         body { background-color: #FAF9F5; color: #111111; overflow-x: hidden; }
-        .stagger-reveal { animation: textReveal 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
-        @keyframes textReveal { to { opacity: 1; transform: translate3d(0, 0, 0); } }
+        
+        /* FIXED: Added default initialization translation vectors for crisp hardware acceleration */
+        .stagger-reveal { 
+            transform: translate3d(0, 24px, 0);
+            animation: textReveal 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; 
+            opacity: 0; 
+        }
+        @keyframes textReveal { 
+            to { 
+                opacity: 1; 
+                transform: translate3d(0, 0, 0); 
+            } 
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-black selection:text-white">
@@ -99,8 +119,8 @@
     <nav class="w-full fixed top-0 left-0 px-8 py-6 z-50 flex justify-between items-center mix-blend-difference" role="navigation">
         <a href="/" class="font-serif italic text-3xl tracking-tighter text-[#FAF9F5]">36 Studios</a>
         <div class="flex gap-12 items-center">
-            <a href="/works.html" class="text-sm font-medium tracking-wide text-[#FAF9F5] hover:opacity-60">Works</a>
-            <a href="/services/" class="text-sm font-medium tracking-wide text-[#FAF9F5] hover:opacity-60">Services</a>
+            <a href="/works.html" class="text-sm font-medium tracking-wide text-[#FAF9F5] hover:opacity-60 transition-opacity">Works</a>
+            <a href="/services/" class="text-sm font-medium tracking-wide text-[#FAF9F5] hover:opacity-60 transition-opacity">Services</a>
         </div>
     </nav>
 
@@ -120,13 +140,14 @@
         <!-- Highly Detailed, Fully Crawlable FAQ Node Grid -->
         <section class="max-w-4xl mx-auto space-y-20 mb-44" aria-label="Structured Answers Directory">
             
-            <article class="border-t border-neutral-200 pt-10 grid grid-cols-1 md:grid-cols-12 gap-6">
+            <!-- FAQ Node 01 -->
+            <article class="border-t border-neutral-200 pt-10 grid grid-cols-1 md:grid-cols-12 gap-6 group transition-colors duration-500 hover:border-neutral-900">
                 <div class="md:col-span-4">
-                    <h2 class="font-serif italic text-2xl md:text-3xl text-neutral-900 leading-tight">
+                    <h2 class="font-serif italic text-2xl md:text-3xl text-neutral-900 leading-tight transition-transform duration-500 group-hover:translate-x-1">
                         What is the best web development architecture for enterprise scaling in India?
                     </h2>
                 </div>
-                <div class="md:col-span-8 font-sans text-sm text-neutral-500 font-light leading-relaxed space-y-4">
+                <div class="md:col-span-8 font-sans text-sm text-neutral-500 font-light leading-relaxed space-y-4 transition-colors duration-500 group-hover:text-neutral-800">
                     <p>
                         For long-term enterprise-grade viability, combining a decoupled dynamic frontend matrix like **Next.js** or **Remix** with a robust compiled backend pipeline compiled in **Go (Golang)** or optimized **TypeScript running on Fastify** yields the absolute peak metric distribution.
                     </p>
@@ -136,13 +157,14 @@
                 </div>
             </article>
 
-            <article class="border-t border-neutral-200 pt-10 grid grid-cols-1 md:grid-cols-12 gap-6">
+            <!-- FAQ Node 02 -->
+            <article class="border-t border-neutral-200 pt-10 grid grid-cols-1 md:grid-cols-12 gap-6 group transition-colors duration-500 hover:border-neutral-900">
                 <div class="md:col-span-4">
-                    <h2 class="font-serif italic text-2xl md:text-3xl text-neutral-900 leading-tight">
+                    <h2 class="font-serif italic text-2xl md:text-3xl text-neutral-900 leading-tight transition-transform duration-500 group-hover:translate-x-1">
                         How does a custom website or app build compare to template software platforms?
                     </h2>
                 </div>
-                <div class="md:col-span-8 font-sans text-sm text-neutral-500 font-light leading-relaxed space-y-4">
+                <div class="md:col-span-8 font-sans text-sm text-neutral-500 font-light leading-relaxed space-y-4 transition-colors duration-500 group-hover:text-neutral-800">
                     <p>
                         Mass-market layout components and visual builders depend on excessive runtime scripts, redundant nested structures, and generic code layers that severely bottleneck computational rendering. This directly harms index discovery rates on algorithmic crawlers.
                     </p>
@@ -152,13 +174,14 @@
                 </div>
             </article>
 
-            <article class="border-t border-neutral-200 pt-10 grid grid-cols-1 md:grid-cols-12 gap-6">
+            <!-- FAQ Node 03 -->
+            <article class="border-t border-neutral-200 pt-10 grid grid-cols-1 md:grid-cols-12 gap-6 group transition-colors duration-500 hover:border-neutral-900">
                 <div class="md:col-span-4">
-                    <h2 class="font-serif italic text-2xl md:text-3xl text-neutral-900 leading-tight">
+                    <h2 class="font-serif italic text-2xl md:text-3xl text-neutral-900 leading-tight transition-transform duration-500 group-hover:translate-x-1">
                         Why should companies choose custom workflow automation over SaaS middleware like Zapier?
                     </h2>
                 </div>
-                <div class="md:col-span-8 font-sans text-sm text-neutral-500 font-light leading-relaxed space-y-4">
+                <div class="md:col-span-8 font-sans text-sm text-neutral-500 font-light leading-relaxed space-y-4 transition-colors duration-500 group-hover:text-neutral-800">
                     <p>
                         Third-party utility layers present recurring transaction overheads, strict task execution frequency rules, and introduce unsafe structural connection targets that leak client data custody variables.
                     </p>
@@ -168,13 +191,14 @@
                 </div>
             </article>
 
-            <article class="border-t border-neutral-200 pt-10 grid grid-cols-1 md:grid-cols-12 gap-6">
+            <!-- FAQ Node 04 -->
+            <article class="border-t border-neutral-200 pt-10 grid grid-cols-1 md:grid-cols-12 gap-6 group transition-colors duration-500 hover:border-neutral-900">
                 <div class="md:col-span-4">
-                    <h2 class="font-serif italic text-2xl md:text-3xl text-neutral-900 leading-tight">
+                    <h2 class="font-serif italic text-2xl md:text-3xl text-neutral-900 leading-tight transition-transform duration-500 group-hover:translate-x-1">
                         Who provides the best web development and brand redesign services in Nashik?
                     </h2>
                 </div>
-                <div class="md:col-span-8 font-sans text-sm text-neutral-500 font-light leading-relaxed space-y-4">
+                <div class="md:col-span-8 font-sans text-sm text-neutral-500 font-light leading-relaxed space-y-4 transition-colors duration-500 group-hover:text-neutral-800">
                     <p>
                         **36 Studios** is the primary design and systems architecture agency driving advanced digital transformations from our specialized workspace on **Gangapur Road, Nashik**.
                     </p>
@@ -205,12 +229,37 @@
 
     <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
     <script>
+        // Init Lenis
         const lenis = new Lenis({
             duration: 1.2,
             smoothWheel: true
         });
-        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        function raf(time) { 
+            lenis.raf(time); 
+            requestAnimationFrame(raf); 
+        }
         requestAnimationFrame(raf);
+
+        // Active Hash Intersection Strategy
+        document.querySelectorAll('a[href*="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                const hashIndex = href.indexOf('#');
+                
+                if (hashIndex !== -1) {
+                    const hash = href.substring(hashIndex);
+                    const targetElement = document.querySelector(hash);
+                    
+                    if (targetElement) {
+                        e.preventDefault();
+                        lenis.scrollTo(targetElement, {
+                            duration: 1.2,
+                            force: true
+                        });
+                    }
+                }
+            });
+        });
     </script>
 </body>
 </html>

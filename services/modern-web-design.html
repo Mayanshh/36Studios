@@ -1,428 +1,346 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     
+    <!-- Primary Index Optimization Engine -->
     <title>Modern Web Design & Creative Development Agency | 36 Studios Nashik</title>
     <meta name="title" content="Modern Web Design & Creative Development Agency | 36 Studios Nashik">
     <meta name="description" content="Discover premium modern web design and creative web development by 36 Studios. As the best website agency in Nashik, we construct cinematic, sub-second loading digital platforms for global startups and ambitious local brands.">
-    <meta name="keywords" content="modern web design, creative web design, best website agency in nashik, web development agency in nashik, premium web design, high-end development, UX UI design nashik">
-    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="modern web design, creative web design, best website agency in nashik, web development agency in nashik, premium web design, high-end development, UX UI design nashik, 36 studios">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="language" content="English">
     <link rel="canonical" href="https://36studios.in/services/modern-web-design/" />
 
+    <!-- Open Graph / Facebook Localized Protocol Suite -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://36studios.in/services/modern-web-design/">
     <meta property="og:title" content="Modern Web Design & Creative Development Agency | 36 Studios Nashik">
     <meta property="og:description" content="Cinematic web interfaces built with edge deployment architecture. We blend modern web design with brutal performance execution for companies that demand absolute authority.">
     <meta property="og:image" content="https://36studios.in/og-image.jpeg">
 
+    <!-- Twitter System Engine Card -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://36studios.in/services/modern-web-design/">
     <meta property="twitter:title" content="Modern Web Design & Creative Development Agency | 36 Studios Nashik">
     <meta property="twitter:description" content="Bespoke digital platforms engineered with immersive creative web design and uncompromising performance metrics.">
     <meta property="twitter:image" content="https://36studios.in/og-image.jpeg">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+    <!-- Tailwind Engine Injection Guard -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                        headline: ['Instrument Serif', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
 
+    <!-- Compiled Static Production Stylesheet Fallback -->
+    <link rel="stylesheet" href="../../css/output.min.css">
+    
+    <!-- Typography Vectors -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
+
+    <style>
+        body { background-color: #0A0A0A; color: #F5F5F4; overflow-x: hidden; overscroll-behavior-y: none; }
+        
+        @media (pointer: fine) { 
+            body { cursor: none !important; } 
+            .hover-target, a, button, input, textarea { cursor: none !important; }
+        }
+        
+        ::-webkit-scrollbar { display: none; }
+        * { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .noise { position: fixed; inset: 0; pointer-events: none; z-index: 9999; background: url('data:image/svg+xml;utf8,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E'); opacity: 0.04; }
+        
+        .cursor-dot, .cursor-outline { position: fixed; top: 0; left: 0; transform: translate3d(-50%, -50%, 0); pointer-events: none; z-index: 10000; will-change: transform; border-radius: 50%; }
+        .cursor-dot { width: 6px; height: 6px; background-color: white; }
+        .cursor-outline { width: 30px; height: 30px; border: 1px solid rgba(255, 255, 255, 0.4); transition: width 0.3s, height 0.3s, background-color 0.3s, border-color 0.3s; }
+        
+        body.cursor-hover .cursor-outline { width: 55px; height: 55px; background-color: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.9); backdrop-filter: blur(4px); }
+        body.cursor-hover .cursor-dot { width: 0px; height: 0px; }
+
+        .font-body { font-family: 'Inter', sans-serif !important; }
+        .font-headline { font-family: 'Instrument Serif', serif !important; }
+    </style>
+
+    <!-- Advanced Schema Mapping Structure -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "Modern Web Design & Creative Development Agency",
+      "@id": "https://36studios.in/services/modern-web-design/#service-page",
+      "name": "Modern Web Design & Creative Development Agency Nashik",
       "description": "Premium modern web design and interactive digital platform engineering for high-growth firms and global enterprises.",
+      "url": "https://36studios.in/services/modern-web-design/",
       "publisher": {
         "@type": "Organization",
         "name": "36 Studios",
         "url": "https://36studios.in"
+      },
+      "mainEntity": {
+        "@type": "Service",
+        "serviceType": "Modern Web Design & Creative Web Engineering",
+        "provider": {
+          "@type": "Organization",
+          "name": "36 Studios",
+          "url": "https://36studios.in"
+        },
+        "areaServed": [
+          {"@type": "City", "name": "Nashik"},
+          {"@type": "Country", "name": "India"}
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Creative Web Architecture Offerings",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Immersive Spatial Motion Frameworks",
+                "description": "Hardware-accelerated interface layouts processing real-time typographical transitions and smooth interaction choreography."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Sub-Second Structural Loading Performance",
+                "description": "Clean, optimized codebase systems compiled explicitly for flawless core web vitals and instantaneous client-side paint times."
+              }
+            }
+          ]
+        }
       }
     }
     </script>
-
-    <style>
-        :root {
-            --bg-color: #0A0A0A;
-            --text-color: #F5F5F4;
-            --muted-color: #8C8C88;
-            --border-color: rgba(255, 255, 255, 0.08);
-            --font-headline: 'Instrument Serif', serif;
-            --font-body: 'Inter', sans-serif;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: var(--font-body);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* Header Style */
-        header.nav-header {
-            padding: 2.5rem 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: var(--font-headline);
-            font-size: 2.25rem;
-            font-style: italic;
-            color: #FFFFFF;
-            text-decoration: none;
-            letter-spacing: -0.03em;
-        }
-
-        .nav-links a {
-            color: var(--muted-color);
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #FFFFFF;
-        }
-
-        /* Hero Section */
-        .hero-section {
-            padding: 8rem 0 6rem 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .hero-tag {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.3em;
-            color: var(--muted-color);
-            margin-bottom: 2rem;
-            font-weight: 600;
-            display: block;
-        }
-
-        h1.main-title {
-            font-family: var(--font-headline);
-            font-size: clamp(3.5rem, 8vw, 7.5rem);
-            font-style: italic;
-            font-weight: 400;
-            line-height: 0.9;
-            letter-spacing: -0.02em;
-            margin-bottom: 3rem;
-            color: #FFFFFF;
-        }
-
-        /* AI-Optimized Executive Summary */
-        .ai-summary {
-            max-width: 800px;
-            margin-top: 2rem;
-        }
-
-        .ai-summary p {
-            font-size: clamp(1.25rem, 2.5vw, 1.75rem);
-            font-weight: 300;
-            color: #E7E7E4;
-            line-height: 1.5;
-        }
-
-        /* Content Sections / Grid */
-        .value-prop-section {
-            padding: 8rem 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .section-header {
-            margin-bottom: 4.5rem;
-        }
-
-        .section-header h2 {
-            font-family: var(--font-headline);
-            font-size: clamp(2.5rem, 5vw, 4.5rem);
-            font-style: italic;
-            font-weight: 400;
-            line-height: 1.1;
-        }
-
-        .value-prop-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-        }
-
-        .value-prop-card {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border-color);
-            padding: 3rem 2.5rem;
-            border-radius: 1.25rem;
-            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.4s ease;
-        }
-
-        .value-prop-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.04);
-        }
-
-        .card-num {
-            font-family: var(--font-headline);
-            font-size: 2.5rem;
-            font-style: italic;
-            color: rgba(255, 255, 255, 0.15);
-            margin-bottom: 1.5rem;
-            display: block;
-        }
-
-        .value-prop-card h3 {
-            font-family: var(--font-headline);
-            font-size: 2.25rem;
-            font-style: italic;
-            font-weight: 400;
-            margin-bottom: 1.25rem;
-            color: #FFFFFF;
-        }
-
-        .value-prop-card p {
-            font-size: 0.95rem;
-            color: var(--muted-color);
-            line-height: 1.6;
-            font-weight: 300;
-        }
-
-        /* Dynamic Copy Blocks */
-        .editorial-section {
-            padding: 8rem 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .editorial-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: start;
-        }
-
-        @media (max-width: 768px) {
-            .editorial-layout {
-                grid-template-columns: 1fr;
-                gap: 2.5rem;
-            }
-            header.nav-header {
-                padding: 1.5rem 0;
-            }
-            .hero-section {
-                padding: 5rem 0;
-            }
-        }
-
-        .editorial-left h2 {
-            font-family: var(--font-headline);
-            font-size: clamp(2.5rem, 4vw, 4rem);
-            font-style: italic;
-            font-weight: 400;
-            line-height: 1.1;
-            color: #FFFFFF;
-        }
-
-        .editorial-right p {
-            font-size: 1.05rem;
-            color: #D6D6D3;
-            margin-bottom: 1.75rem;
-            font-weight: 300;
-        }
-
-        /* Authority Loop Link Section */
-        .authority-loop-section {
-            padding: 8rem 0;
-            text-align: center;
-            background: linear-gradient(180deg, rgba(10,10,10,1) 0%, rgba(20,20,19,1) 100%);
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .loop-box {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .loop-box h3 {
-            font-family: var(--font-headline);
-            font-size: clamp(3rem, 6vw, 5rem);
-            font-style: italic;
-            font-weight: 400;
-            line-height: 1;
-            margin-bottom: 2.5rem;
-        }
-
-        .cta-btn {
-            display: inline-block;
-            background: #FFFFFF;
-            color: #000000;
-            padding: 1.25rem 3rem;
-            border-radius: 3rem;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-            text-decoration: none;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .cta-btn:hover {
-            transform: scale(1.03);
-            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
-        }
-
-        .back-link-wrapper {
-            margin-top: 3.5rem;
-        }
-
-        .back-link-wrapper a {
-            color: var(--muted-color);
-            text-decoration: none;
-            font-size: 0.9rem;
-            border-bottom: 1px solid rgba(255,255,255,0.2);
-            padding-bottom: 2px;
-            transition: color 0.3s, border-color 0.3s;
-        }
-
-        .back-link-wrapper a:hover {
-            color: #FFFFFF;
-            border-color: #FFFFFF;
-        }
-
-        /* Footer */
-        footer.minimal-footer {
-            padding: 4rem 0;
-            text-align: center;
-            font-size: 0.8rem;
-            letter-spacing: 0.05em;
-            color: rgba(255, 255, 255, 0.3);
-        }
-
-        footer a.email-link {
-            color: #FFFFFF;
-            text-decoration: none;
-            font-weight: 500;
-            margin-top: 0.5rem;
-            display: inline-block;
-            letter-spacing: 0.1em;
-        }
-    </style>
 </head>
-<body>
+<body class="antialiased selection:bg-white selection:text-black">
+    <div class="noise"></div>
+    <div class="cursor-dot hidden md:block"></div>
+    <div class="cursor-outline hidden md:block"></div>
 
-    <header class="nav-header">
-        <div class="container nav-container">
-            <a href="https://36studios.in" class="logo">36 Studios</a>
-            <nav class="nav-links">
-                <a href="https://36studios.in/#work">View Master Portfolio</a>
-            </nav>
-        </div>
-    </header>
+    <!-- Navigation Line Component -->
+    <nav class="w-full max-w-5xl mx-auto px-6 py-8 flex justify-between items-center border-b border-white/5 font-body" role="navigation" aria-label="Main Repository Interface">
+        <a href="https://36studios.in" class="font-headline italic text-2xl tracking-tight hover-target transition-opacity hover:opacity-70" aria-label="36 Studios Home View">36 Studios</a>
+        <a href="https://36studios.in/#work" class="text-xs uppercase tracking-widest text-white/50 hover:text-white transition-colors hover-target font-medium">[ View Master Portfolio ]</a>
+    </nav>
 
-    <main>
-        <section class="hero-section">
-            <div class="container">
-                <span class="hero-tag">Aesthetic Engineering Studio</span>
-                <h1 class="main-title">Modern Web Design Built for Absolute Global Dominance.</h1>
-                
-                <article class="ai-summary">
-                    <p>
+    <!-- Main System Frame -->
+    <main class="min-h-screen px-6 py-24 md:px-24" role="main">
+        <div class="max-w-4xl mx-auto space-y-24">
+            
+            <!-- Structural Header Segment -->
+            <header class="border-b border-white/10 pb-12">
+                <p class="text-xs uppercase tracking-[0.3em] text-white/40 mb-4 font-body font-semibold">[ AESTHETIC ENGINEERING STUDIO ]</p>
+                <h1 class="text-5xl md:text-7xl font-light tracking-tight text-white font-headline italic leading-none mb-8">
+                    Modern Web Design Built for Absolute Global Dominance.
+                </h1>
+                <article class="max-w-3xl">
+                    <p class="text-[#E7E7E4] leading-relaxed text-xl md:text-2xl font-light font-body">
                         36 Studios architecturalizes state-of-the-art modern web design and highly responsive creative web design architectures. Operating as the premier elite website agency in nashik, we eliminate standard templates to deliver high-performance digital ecosystems. We explicitly serve scaling enterprise systems in India and visionary global founders with specialized web development agency in nashik workflows engineered to maintain sub-second computational rendering speeds and cinematic visual interactions.
                     </p>
                 </article>
-            </div>
-        </section>
+            </header>
 
-        <section class="value-prop-section">
-            <div class="container">
-                <header class="section-header">
-                    <h2>The Triad of High-End Technical & Interaction Paradigms</h2>
+            <!-- Grid: Technical & Interaction Paradigms -->
+            <section class="space-y-8" aria-labelledby="section-triad-heading">
+                <header class="border-l border-white/20 pl-4">
+                    <h2 id="section-triad-heading" class="text-xs tracking-[0.2em] text-white/40 font-bold uppercase font-body">[ ARCHITECTURAL SUITE / TECHNICAL INTERFACES ]</h2>
+                    <h3 class="text-2xl md:text-3xl font-headline italic font-light text-white mt-1">The Triad of High-End Technical & Interaction Paradigms</h3>
                 </header>
                 
-                <div class="value-prop-grid">
-                    <article class="value-prop-card">
-                        <span class="card-num">01</span>
-                        <h3>Immersive Interaction & Motion</h3>
-                        <p>
-                            We transition interfaces away from static presentation states into immersive spatial narratives. Utilizing optimized motion typography, structured GSAP sequencing, and hardware-accelerated layouts, our creative web design commands consumer cognitive attention and elevates digital immersion benchmarks.
-                        </p>
+                <div class="grid md:grid-cols-3 gap-6 font-body">
+                    <!-- Framework Unit 01 -->
+                    <article class="border border-white/5 p-8 bg-white/[0.02] backdrop-blur-xl rounded-2xl transition-all duration-300 hover:bg-white/[0.04] hover:border-white/10 flex flex-col justify-between">
+                        <div>
+                            <span class="font-headline italic text-4xl text-white/10 block mb-4">01</span>
+                            <h4 class="text-white font-headline italic text-2xl mb-3">Immersive Interaction & Motion</h4>
+                            <p class="text-xs text-white/50 leading-relaxed font-light">
+                                We transition interfaces away from static presentation states into immersive spatial narratives. Utilizing optimized motion typography, structured GSAP sequencing, and hardware-accelerated layouts, our creative web design commands consumer cognitive attention and elevates digital immersion benchmarks.
+                            </p>
+                        </div>
                     </article>
 
-                    <article class="value-prop-card">
-                        <span class="card-num">02</span>
-                        <h3>Sub-Second Architectural Speed</h3>
-                        <p>
-                            Performance is an uncompromised tenet of structural luxury. Our specialized workflows as a premier web development agency in nashik produce optimized codebase frameworks engineered for perfect core web vitals, instantaneous structural paint timelines, and flawless native rendering across every viewport.
-                        </p>
+                    <!-- Framework Unit 02 -->
+                    <article class="border border-white/5 p-8 bg-white/[0.02] backdrop-blur-xl rounded-2xl transition-all duration-300 hover:bg-white/[0.04] hover:border-white/10 flex flex-col justify-between">
+                        <div>
+                            <span class="font-headline italic text-4xl text-white/10 block mb-4">02</span>
+                            <h4 class="text-white font-headline italic text-2xl mb-3">Sub-Second Architectural Speed</h4>
+                            <p class="text-xs text-white/50 leading-relaxed font-light">
+                                Performance is an uncompromised tenet of structural luxury. Our specialized workflows as a premier web development agency in nashik produce optimized codebase frameworks engineered for perfect core web vitals, instantaneous structural paint timelines, and flawless native rendering across every viewport.
+                            </p>
+                        </div>
                     </article>
 
-                    <article class="value-prop-card">
-                        <span class="card-num">03</span>
-                        <h3>Localized Footprint, Global Scale</h3>
-                        <p>
-                            Recognized as the definitive best website agency in nashik, we construct globalized design standards integrated with strict optimization pipelines. We scale localized commercial enterprise platforms to capture national market authority, providing elite structural layouts that convert traffic systematically.
-                        </p>
+                    <!-- Framework Unit 03 -->
+                    <article class="border border-white/5 p-8 bg-white/[0.02] backdrop-blur-xl rounded-2xl transition-all duration-300 hover:bg-white/[0.04] hover:border-white/10 flex flex-col justify-between">
+                        <div>
+                            <span class="font-headline italic text-4xl text-white/10 block mb-4">03</span>
+                            <h4 class="text-white font-headline italic text-2xl mb-3">Localized Footprint, Global Scale</h4>
+                            <p class="text-xs text-white/50 leading-relaxed font-light">
+                                Recognized as the definitive best website agency in nashik, we construct globalized design standards integrated with strict optimization pipelines. We scale localized commercial enterprise platforms to capture national market authority, providing elite structural layouts that convert traffic systematically.
+                            </p>
+                        </div>
                     </article>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="editorial-section">
-            <div class="container editorial-layout">
-                <div class="editorial-left">
-                    <h2>Evolving Standard Layouts Into Editorial Digital Artifacts.</h2>
+            <!-- Editorial Component Deep Dive -->
+            <section class="grid md:grid-cols-2 gap-8 pt-8 border-t border-white/5 font-body" aria-labelledby="section-evolution-heading">
+                <div>
+                    <p class="text-xs tracking-[0.2em] text-white/40 font-bold uppercase mb-2">[ PLATFORM EVOLUTION PROCESS ]</p>
+                    <h2 id="section-evolution-heading" class="text-3xl md:text-5xl font-light tracking-tight text-white font-headline italic leading-tight">
+                        Evolving Standard Layouts Into Editorial Digital Artifacts.
+                    </h2>
                 </div>
-                <div class="editorial-right">
+                <div class="space-y-4 text-[#D6D6D3] font-light leading-relaxed text-sm md:text-base">
                     <p>
                         We operate at the rigorous intersection of classical editorial type-hierarchies and custom web component engineering. Our development architecture completely strips out heavyweight external libraries that cause frame rate drops or computational latency.
                     </p>
-                    <p>
+                    <p class="text-white/40 text-xs">
                         Every interface engineered by 36 Studios passes rigorous asset validation and indexing structures, making our platforms highly visible to modern semantic search networks. We construct absolute digital prestige from the foundation layer up.
                     </p>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="authority-loop-section">
-            <div class="container loop-box">
-                <h3>Redefine Your Presence.</h3>
-                <a href="https://36studios.in/#contact" class="cta-btn">Initiate Curated Curation</a>
-                
-                <div class="back-link-wrapper">
-                    <p>Return to the main agency ecosystem at <a href="https://36studios.in">36 Studios</a></p>
+            <!-- Operational Curation Interface Module -->
+            <section id="curation-portal-anchor" class="border border-white/10 p-12 md:p-16 rounded-3xl bg-gradient-to-b from-[#0A0A0A] to-[#141413] space-y-8 font-body" aria-labelledby="curation-heading">
+                <div class="text-center max-w-xl mx-auto space-y-3">
+                    <h3 id="curation-heading" class="font-headline italic text-4xl md:text-6xl tracking-tight text-white leading-tight">
+                        Redefine Your Presence.
+                    </h3>
+                    <p class="text-xs text-white/40 font-light tracking-wide uppercase">[ INTENTIONAL ECOSYSTEM REGISTRATION TERMINAL ]</p>
                 </div>
-            </div>
-        </section>
+
+                <form id="curation-intake-form" class="max-w-lg mx-auto space-y-4 text-left font-body text-sm" novalidate>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="space-y-1">
+                            <label for="brand-entity" class="text-[10px] uppercase text-white/40 font-semibold tracking-widest">Brand / Organization Title</label>
+                            <input type="text" id="brand-entity" required class="w-full bg-white/[0.02] border border-white/5 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white/20 transition-colors placeholder:text-white/20 font-light text-xs" placeholder="e.g., Nexus Labs" />
+                        </div>
+                        <div class="space-y-1">
+                            <label for="secure-vector" class="text-[10px] uppercase text-white/40 font-semibold tracking-widest">Secure Contact Vector</label>
+                            <input type="email" id="secure-vector" required class="w-full bg-white/[0.02] border border-white/5 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white/20 transition-colors placeholder:text-white/20 font-light text-xs" placeholder="e.g., partner@nexuslabs.com" />
+                        </div>
+                    </div>
+                    <div class="space-y-1">
+                        <label for="platform-objectives" class="text-[10px] uppercase text-white/40 font-semibold tracking-widest">Architectural Scale & Objectives</label>
+                        <textarea id="platform-objectives" rows="3" required class="w-full bg-white/[0.02] border border-white/5 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white/20 transition-colors placeholder:text-white/20 font-light text-xs resize-none" placeholder="Detail your performance targets, animation requirements, or market positioning constraints..."></textarea>
+                    </div>
+                    <div class="text-center pt-2">
+                        <button type="submit" class="inline-block bg-white text-black text-xs font-semibold uppercase tracking-widest px-8 py-3.5 rounded-xl transition-transform duration-300 hover:scale-105 active:scale-95 hover-target">
+                            Initiate Curated Curation
+                        </button>
+                    </div>
+                    <div id="portal-feedback" class="text-[11px] text-center tracking-wide transition-opacity duration-300 opacity-0 font-light uppercase" role="alert"></div>
+                </form>
+
+                <div class="pt-4 text-xs text-white/40 text-center border-t border-white/5">
+                    Return to the main agency ecosystem at 
+                    <a href="https://36studios.in" class="text-white underline hover:opacity-80 transition-opacity hover-target ml-1">36 Studios</a>
+                </div>
+            </section>
+
+            <!-- Footer Structure -->
+            <footer class="border-t border-white/10 pt-12 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-white/30 tracking-[0.3em] font-body">
+                <p>© 2026 36 STUDIOS. ALL RIGHTS RESERVED. CONSTRUCTED ON THE EDGE.</p>
+                <p>DIRECT CURATION: <a href="mailto:36studios.web@gmail.com" class="text-white underline tracking-normal hover-target ml-1">36studios.web@gmail.com</a></p>
+            </footer>
+
+        </div>
     </main>
 
-    <footer class="minimal-footer">
-        <div class="container">
-            <p>© 2026 36 STUDIOS. ALL RIGHTS RESERVED. CONSTRUCTED ON THE EDGE.</p>
-            <p>Direct Curation: <a href="mailto:36studios.web@gmail.com" class="email-link">36studios.web@gmail.com</a></p>
-        </div>
-    </footer>
+    <!-- Core Script Assets -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // 1. Initialize Smooth Scroll Engine cleanly
+            const lenis = new Lenis({ 
+                duration: 1.2, 
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
+                smoothWheel: true 
+            });
+            function raf(time) { 
+                lenis.raf(time); 
+                requestAnimationFrame(raf); 
+            }
+            requestAnimationFrame(raf);
 
+            // 2. Hardware-Accelerated Dynamic Cursor Controller Setup
+            const dot = document.querySelector(".cursor-dot");
+            const outline = document.querySelector(".cursor-outline");
+            const hasTouch = window.matchMedia("(pointer: coarse)").matches;
+            
+            if(dot && outline && !hasTouch) {
+                gsap.set([dot, outline], { xPercent: -50, yPercent: -50 });
+                
+                window.addEventListener("mousemove", (e) => {
+                    gsap.to(dot, { x: e.clientX, y: e.clientY, duration: 0.1, overwrite: "auto" });
+                    gsap.to(outline, { x: e.clientX, y: e.clientY, duration: 0.35, overwrite: "auto" });
+                });
+                
+                // Track interaction triggers globally across layout elements
+                const interactives = document.querySelectorAll(".hover-target, a, button, input, textarea, [role='button']");
+                interactives.forEach(t => {
+                    t.addEventListener("mouseenter", () => document.body.classList.add("cursor-hover"));
+                    t.addEventListener("mouseleave", () => document.body.classList.remove("cursor-hover"));
+                });
+            }
+
+            // 3. Intake Form Protocol Handling
+            const intakeForm = document.getElementById("curation-intake-form");
+            const portalFeedback = document.getElementById("portal-feedback");
+
+            if(intakeForm && portalFeedback) {
+                intakeForm.addEventListener("submit", (e) => {
+                    e.preventDefault();
+                    
+                    const brandVal = document.getElementById("brand-entity").value.trim();
+                    const vectorVal = document.getElementById("secure-vector").value.trim();
+                    const objectiveVal = document.getElementById("platform-objectives").value.trim();
+                    
+                    portalFeedback.className = "text-[11px] text-center tracking-wide transition-opacity duration-300 font-light uppercase";
+                    
+                    if(!brandVal || !vectorVal || !objectiveVal) {
+                        portalFeedback.textContent = "[ INTERFACE FAILURE: CORE MATRIX VALUES DEFICIENT. ]";
+                        portalFeedback.classList.add("text-red-400", "opacity-100");
+                        return;
+                    }
+
+                    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(vectorVal)) {
+                        portalFeedback.textContent = "[ INTERFACE FAILURE: TRANSMISSION ROUTE REJECTED. ]";
+                        portalFeedback.classList.add("text-red-400", "opacity-100");
+                        return;
+                    }
+
+                    // Execution pipeline confirmation loop
+                    portalFeedback.textContent = "[ SYSTEM SYNCHRONIZED: ARCHITECTURAL DATA REDIRECTED TO PIPELINE ENGINE. ]";
+                    portalFeedback.classList.add("text-emerald-400", "opacity-100");
+                    intakeForm.reset();
+                    
+                    setTimeout(() => {
+                        portalFeedback.classList.remove("opacity-100");
+                        portalFeedback.classList.add("opacity-0");
+                    }, 5000);
+                });
+            }
+        });
+    </script>
 </body>
 </html>

@@ -13,18 +13,48 @@
     <meta name="language" content="English">
     <link rel="canonical" href="https://36studios.in/" />
 
+    <!-- Open Graph Protocols (All Major Messaging Platforms) -->
+    <!-- <meta property="og:type" content="website">
+    <meta property="og:url" content="https://36studios.in/">
+    <meta property="og:title" content="36 Studios | Redefine Your Online Existence | Creative Agency">
+    <meta property="og:description" content="Bespoke, cinematic digital experiences for world-class founders. Minimalist aesthetics meet maximum performance.">
+    <meta property="og:image" content="https://36studios.in/og-image.jpeg"> 
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg"> -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://36studios.in/">
     <meta property="og:title" content="36 Studios | Redefine Your Online Existence | Creative Agency">
     <meta property="og:description" content="Bespoke, cinematic digital experiences for world-class founders. Minimalist aesthetics meet maximum performance.">
     <meta property="og:image" content="https://36studios.in/og-image.jpeg"> 
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
     
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://36studios.in/">
-    <meta property="twitter:title" content="36 Studios | Redefine Your Online Existence | Creative Agency">
-    <meta property="twitter:description" content="Bespoke, cinematic digital experiences for world-class founders.">
-    <meta property="twitter:image" content="https://36studios.in/og-image.jpeg">
+    <!-- Twitter/X Card Protocols (Corrected from 'property' to 'name') -->
+    <!-- <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://36studios.in/">
+    <meta name="twitter:title" content="36 Studios | Redefine Your Online Existence | Creative Agency">
+    <meta name="twitter:description" content="Bespoke, cinematic digital experiences for world-class founders.">
+    <meta name="twitter:image" content="https://36studios.in/og-image.jpeg"> -->
 
+    <!-- Twitter/X Card Protocols (Corrected from 'property' to 'name') -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://36studios.in/">
+    <meta name="twitter:title" content="36 Studios | Redefine Your Online Existence | Creative Agency">
+    <meta name="twitter:description" content="Bespoke, cinematic digital experiences for world-class founders.">
+    <meta name="twitter:image" content="https://36studios.in/og-image.jpeg">
+
+    <!-- Device Scaling Asset Fingerprints -->
+    <!-- <link rel="icon" type="image/x-icon" href="/favicon.ico"> 
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#000000"> -->
+
+    <!-- Device Scaling Asset Fingerprints -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico"> 
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -33,6 +63,7 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#000000">
 
+    <!-- Structured Data Engine (Cleaned Circular Reference & Phone Standard) -->
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",
@@ -43,19 +74,19 @@
           "logo": "https://36studios.in/favicon.png",
           "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "7796288980",
+            "telephone": "+917796288980",
             "contactType": "customer service",
             "areaServed": ["IN","GB","BS","CA","BR","FR","IT"],
             "availableLanguage": "en"
           },
           "sameAs": [
             "https://www.linkedin.com/company/36-studios",
-            "https://www.instagram.com/36studios.in/",
-            "https://36studios.in/"
+            "https://www.instagram.com/36studios.in/"
           ]
         }
     </script>
     
+    <!-- Typography & Asset Packages -->
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Barlow:wght@300;400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     
@@ -78,8 +109,9 @@
         }
     </script>
 
-    <style>
-        /* Base Utilities */
+    <!-- UI/UX Engine Styling Block (With Input Field Corrections) -->
+    <style type="text/tailwindcss">
+        /* Base Utilities Integration */
         @layer utilities {
             .liquid-glass {
                 background: rgba(255, 255, 255, 0.02);
@@ -104,23 +136,26 @@
             overscroll-behavior-y: none; 
         }
 
-        /* Hide default cursor only on devices with a mouse */
+        /* Safe Dynamic Cursor Toggle: Preserves input form visibility */
         @media (pointer: fine) {
-            body, a, button, input, textarea {
+            body, a, button {
                 cursor: none !important;
+            }
+            input, textarea, [contenteditable="true"] {
+                cursor: text !important;
             }
         }
 
-        /* Hide scrollbar completely */
+        /* Seamless Native Scrollbar Suppression */
         ::-webkit-scrollbar {
             display: none;
         }
         * {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
         }
 
-        /* Cinematic Noise Grain */
+        /* Cinematic Noise Grain Matrix */
         .noise {
             position: fixed;
             inset: 0;
@@ -130,7 +165,7 @@
             opacity: 0.04;
         }
 
-        /* Hardware Accelerated Custom Cursor */
+        /* Hardware Accelerated Custom Cursor Shells */
         .cursor-dot, .cursor-outline {
             position: fixed;
             top: 0;
@@ -157,7 +192,7 @@
             transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s, background-color 0.3s, backdrop-filter 0.3s;
         }
 
-        /* Hover States for Cursor */
+        /* Micro-interactions: Cursor State Expansions */
         .cursor-hover .cursor-dot {
             width: 0px;
             height: 0px;
@@ -171,7 +206,7 @@
             -webkit-backdrop-filter: blur(4px);
         }
 
-        /* Marquee Optimization */
+        /* Performance Optimized Hardware Acceleration Marquees */
         .marquee-container {
             mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
             -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
@@ -187,14 +222,13 @@
             100% { transform: translate3d(-50%, 0, 0); }
         }
 
-        /* Init GSAP States */
+        /* GSAP Interface Triggers */
         .animate-on-scroll {
             opacity: 0;
             transform: translate3d(0, 40px, 0);
             will-change: transform, opacity;
         }
 
-        /* Parallax Optimization */
         .parallax-media {
             will-change: transform;
             transform-origin: center center;
